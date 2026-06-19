@@ -16,6 +16,7 @@ import os
 import json
 import asyncio
 import logging
+from datetime import datetime, timezone
 from typing import List, Dict, Optional, Tuple
 
 import asyncpg
@@ -96,10 +97,12 @@ pool: Optional[asyncpg.Pool] = None
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS users (
-    telegram_id BIGINT PRIMARY KEY,
-    name        TEXT,
-    username    TEXT,
-    created_at  TIMESTAMPTZ DEFAULT now()
+    telegram_id    BIGINT PRIMARY KEY,
+    name           TEXT,
+    username       TEXT,
+    last_seen      TIMESTAMPTZ,
+    active_seconds BIGINT DEFAULT 0,
+    created_at     TIMESTAMPTZ DEFAULT now()
 );
 CREATE TABLE IF NOT EXISTS topic_content (
     topic_key  TEXT NOT NULL,
@@ -118,6 +121,8 @@ CREATE TABLE IF NOT EXISTS user_progress (
     PRIMARY KEY (telegram_id, topic_key, level)
 );
 ALTER TABLE users ADD COLUMN IF NOT EXISTS username TEXT;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS last_seen TIMESTAMPTZ;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS active_seconds BIGINT DEFAULT 0;
 """
 
 
@@ -137,9 +142,22 @@ async def get_user(tg_id: int):
 async def create_user(tg_id: int, name: str, username: Optional[str] = None):
     async with pool.acquire() as con:
         await con.execute(
-            "INSERT INTO users (telegram_id, name, username) VALUES ($1,$2,$3) "
+            "INSERT INTO users (telegram_id, name, username, last_seen) VALUES ($1,$2,$3, now()) "
             "ON CONFLICT (telegram_id) DO UPDATE SET name=$2, username=$3",
             tg_id, name, username,
+        )
+
+
+async def touch_user(tg_id: int):
+    """Update last_seen and accumulate active time (gaps capped at 10 minutes)."""
+    async with pool.acquire() as con:
+        await con.execute(
+            "UPDATE users SET "
+            "active_seconds = COALESCE(active_seconds, 0) + "
+            "LEAST(COALESCE(EXTRACT(EPOCH FROM (now() - last_seen))::bigint, 0), 600), "
+            "last_seen = now() "
+            "WHERE telegram_id = $1",
+            tg_id,
         )
 
 
@@ -377,24 +395,17 @@ async def notify_admin(context: ContextTypes.DEFAULT_TYPE, tg_user, display_name
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     context.user_data.clear()
-    tg_user = update.effective_user
-    tg_id = tg_user.id
+    tg_id = update.effective_user.id
+    await touch_user(tg_id)
 
     user = await get_user(tg_id)
-    if user:
-        await show_levels(update, context, greeting=f"Hi {user['name']}! 🇩🇪")
-        return
-
-    # New user. If they have a Telegram @username we register them right away;
-    # otherwise we ask for a name. Either way the admin gets notified.
-    if tg_user.username:
-        name = tg_user.first_name or tg_user.full_name or "Freund"
-        await create_user(tg_id, name, tg_user.username)
-        await notify_admin(context, tg_user, name)
-        await show_levels(update, context, greeting=f"Hi {name}! 🇩🇪 Welcome aboard!")
-    else:
+    if not user:
+        # Always ask for a name on first entry. The @username and numeric ID are
+        # captured automatically from the Telegram account at registration.
         context.user_data["mode"] = "register"
         await update.message.reply_text(WELCOME)
+        return
+    await show_levels(update, context, greeting=f"Hi {user['name']}! 🇩🇪")
 
 
 async def show_levels(update: Update, context: ContextTypes.DEFAULT_TYPE, greeting: str = "Choose your level:"):
@@ -408,10 +419,12 @@ async def show_levels(update: Update, context: ContextTypes.DEFAULT_TYPE, greeti
 async def on_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     mode = context.user_data.get("mode")
     tg_id = update.effective_user.id
+    await touch_user(tg_id)
 
     if mode == "register":
         name = (update.message.text or "").strip()[:50] or "Freund"
-        await create_user(tg_id, name, None)
+        uname = update.effective_user.username
+        await create_user(tg_id, name, uname)
         context.user_data["mode"] = None
         await notify_admin(context, update.effective_user, name)
         await update.message.reply_text(f"Welcome, {name}! ✅")
@@ -537,6 +550,7 @@ async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await q.answer()
     data = q.data
     tg_id = update.effective_user.id
+    await touch_user(tg_id)
 
     if data == "back:levels":
         context.user_data["mode"] = None
@@ -594,6 +608,89 @@ async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return
 
 
+# ----------------------------- Admin report -----------------------------
+def _humanize_seconds(s) -> str:
+    s = int(s or 0)
+    if s < 60:
+        return f"{s}s"
+    m, _ = divmod(s, 60)
+    if m < 60:
+        return f"{m}m"
+    h, m = divmod(m, 60)
+    return f"{h}h {m}m"
+
+
+def _humanize_ago(dt) -> str:
+    if not dt:
+        return "never"
+    sec = int((datetime.now(timezone.utc) - dt).total_seconds())
+    if sec < 60:
+        return "just now"
+    if sec < 3600:
+        return f"{sec // 60}m ago"
+    if sec < 86400:
+        return f"{sec // 3600}h ago"
+    return f"{sec // 86400}d ago"
+
+
+async def report(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    if not ADMIN_ID or update.effective_user.id != ADMIN_ID:
+        await update.message.reply_text("This command is for the admin only.")
+        return
+
+    async with pool.acquire() as con:
+        users = await con.fetch(
+            "SELECT telegram_id, name, username, last_seen, active_seconds, created_at "
+            "FROM users ORDER BY last_seen DESC NULLS LAST"
+        )
+        prog = await con.fetch(
+            "SELECT telegram_id, topic_key, level, current_index, completed FROM user_progress"
+        )
+
+    if not users:
+        await update.message.reply_text("No users yet.")
+        return
+
+    by_user: Dict[int, list] = {}
+    for r in prog:
+        by_user.setdefault(r["telegram_id"], []).append(r)
+
+    blocks = [f"📊 Report - {len(users)} user(s)"]
+    for u in users:
+        rows = by_user.get(u["telegram_id"], [])
+        sentences = sum(r["current_index"] for r in rows)
+        if rows:
+            rows_sorted = sorted(
+                rows, key=lambda r: (r["level"], TOPIC_TITLE.get(r["topic_key"], r["topic_key"]))
+            )
+            visited = ", ".join(
+                f"{r['level']}-{TOPIC_TITLE.get(r['topic_key'], r['topic_key'])} "
+                + ("DONE" if r["completed"] else f"({r['current_index']}/{SENTENCES_PER_TOPIC})")
+                for r in rows_sorted
+            )
+        else:
+            visited = "-"
+        uname = f"@{u['username']}" if u["username"] else "(no @)"
+        joined = u["created_at"].strftime("%Y-%m-%d") if u["created_at"] else "?"
+        blocks.append(
+            f"\n👤 {u['name']}  {uname}\n"
+            f"   ID: {u['telegram_id']}\n"
+            f"   Joined: {joined} · Last: {_humanize_ago(u['last_seen'])}\n"
+            f"   Active: {_humanize_seconds(u['active_seconds'])} · Sentences: {sentences}\n"
+            f"   Visited: {visited}"
+        )
+
+    msg = ""
+    for b in blocks:
+        if len(msg) + len(b) + 1 > 3500:
+            if msg.strip():
+                await update.message.reply_text(msg)
+            msg = ""
+        msg += b + "\n"
+    if msg.strip():
+        await update.message.reply_text(msg)
+
+
 # ----------------------------- Main -----------------------------
 async def main():
     missing = [n for n, v in [("BOT_TOKEN", BOT_TOKEN), ("DATABASE_URL", DATABASE_URL),
@@ -605,6 +702,7 @@ async def main():
 
     app = ApplicationBuilder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", start))
+    app.add_handler(CommandHandler("report", report))
     app.add_handler(CallbackQueryHandler(on_callback))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, on_text))
 
