@@ -13,6 +13,7 @@ then cached in the DB so everyone else reads it from there.
 """
 
 import os
+import re
 import json
 import asyncio
 import logging
@@ -322,6 +323,70 @@ async def get_feedback(en: str, de_ref: str, user_answer: str, level: str) -> st
     return raw.strip()
 
 
+# ----------------------------- Placement test -----------------------------
+PLACEMENT_KEY = "__placement__"
+PLACEMENT_LVL = "MIX"
+
+
+async def generate_placement() -> List[Dict]:
+    prompt = (
+        "You are a German placement-test designer.\n"
+        "Create EXACTLY 12 English sentences for a learner to translate into German, to assess "
+        "their CEFR level. Use 3 sentences for EACH level, in this order: A1 (easiest), A2, B1, "
+        "B2 (hardest). Go from easier to harder overall.\n"
+        "For each sentence give: the English text, a natural reference German translation, and its level.\n"
+        "Return ONLY a valid JSON array of 12 objects, no markdown, no comments:\n"
+        '[{"en": "English sentence", "de": "German translation", "level": "A1"}]'
+    )
+    for attempt in range(2):
+        raw = await gemini_chat([{"role": "user", "content": prompt}], max_tokens=2500, temperature=0.6)
+        if not raw:
+            continue
+        try:
+            data = _extract_json_array(raw)
+            cleaned = []
+            for item in data:
+                en = (item.get("en") or "").strip()
+                de = (item.get("de") or "").strip()
+                lvl = (item.get("level") or "").strip().upper()
+                if en and de and lvl in LEVELS:
+                    cleaned.append({"en": en, "de": de, "level": lvl})
+            if len(cleaned) >= 8:
+                return cleaned
+            log.warning("placement gen gave %s items (attempt %s)", len(cleaned), attempt)
+        except Exception as e:  # noqa: BLE001
+            log.error("placement parse failed (%s): %s", attempt, e)
+    return []
+
+
+async def grade_score(en: str, de_ref: str, user_answer: str) -> int:
+    prompt = (
+        "Rate how correct this German translation is, from 0 to 10 "
+        "(10 = perfect, 0 = empty or totally wrong). Accept valid paraphrases as correct.\n"
+        f"English: {en}\n"
+        f"Reference German: {de_ref}\n"
+        f"Learner's answer: {user_answer}\n"
+        "Reply with ONLY a single integer from 0 to 10. No words, no punctuation."
+    )
+    raw = await gemini_chat([{"role": "user", "content": prompt}], max_tokens=10, temperature=0.0)
+    if not raw:
+        return 5
+    m = re.search(r"\d+", raw)
+    if not m:
+        return 5
+    return max(0, min(10, int(m.group())))
+
+
+async def get_placement_set() -> List[Dict]:
+    cached = await get_content(PLACEMENT_KEY, PLACEMENT_LVL)
+    if cached:
+        return cached
+    fresh = await generate_placement()
+    if fresh:
+        await save_content(PLACEMENT_KEY, PLACEMENT_LVL, fresh)
+    return fresh
+
+
 # ----------------------------- Keyboards -----------------------------
 def levels_keyboard() -> InlineKeyboardMarkup:
     rows, row = [], []
@@ -428,7 +493,18 @@ async def on_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
         context.user_data["mode"] = None
         await notify_admin(context, update.effective_user, name)
         await update.message.reply_text(f"Welcome, {name}! ✅")
-        await show_levels(update, context, greeting="Let's start 🇩🇪")
+        kb = InlineKeyboardMarkup([
+            [InlineKeyboardButton("📊 Take placement test", callback_data="pl:start")],
+            [InlineKeyboardButton("Skip - choose myself", callback_data="pl:skip")],
+        ])
+        await update.message.reply_text(
+            "Want a quick placement test to find your level? (12 short translations)",
+            reply_markup=kb,
+        )
+        return
+
+    if mode == "placement":
+        await handle_placement_answer(update, context)
         return
 
     if mode == "practice":
@@ -545,12 +621,112 @@ async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await send_sentence(update, context, edit=False)
 
 
+async def start_placement(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    chat = update.effective_chat
+    if update.callback_query:
+        try:
+            await update.callback_query.edit_message_text("⏳ Preparing your placement test...")
+        except Exception:  # noqa: BLE001
+            pass
+    else:
+        await chat.send_message("⏳ Preparing your placement test...")
+
+    sentences = await get_placement_set()
+    if not sentences:
+        await chat.send_message("❌ Couldn't prepare the test now. Try /test again in a moment.")
+        return
+
+    context.user_data["mode"] = "placement"
+    context.user_data["pl_sentences"] = sentences
+    context.user_data["pl_index"] = 0
+    context.user_data["pl_scores"] = []
+    await chat.send_message(
+        f"📊 Placement test - {len(sentences)} sentences, easy to hard.\n"
+        "Translate each one into German. Let's go!"
+    )
+    await send_placement_question(update, context)
+
+
+async def send_placement_question(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    s = context.user_data["pl_sentences"]
+    i = context.user_data["pl_index"]
+    en = s[i]["en"]
+    await update.effective_chat.send_message(
+        f"Q{i + 1}/{len(s)}\n🇬🇧 {en}\n\n✍️ In German:"
+    )
+
+
+def _recommend_level(scores):
+    by: Dict[str, list] = {}
+    for lvl, sc in scores:
+        by.setdefault(lvl, []).append(sc)
+    passed = {}
+    for lvl in LEVELS:
+        vals = by.get(lvl, [])
+        passed[lvl] = (sum(vals) / len(vals) >= 7) if vals else False
+    for lvl in LEVELS:
+        if not passed[lvl]:
+            return lvl, passed, by
+    return LEVELS[-1], passed, by
+
+
+async def handle_placement_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    s = context.user_data.get("pl_sentences")
+    i = context.user_data.get("pl_index", 0)
+    if not s:
+        context.user_data["mode"] = None
+        await update.message.reply_text("Test reset. Send /test to start again.")
+        return
+    cur = s[i]
+    ans = (update.message.text or "").strip()
+    await context.bot.send_chat_action(chat_id=update.effective_chat.id, action=ChatAction.TYPING)
+    score = await grade_score(cur["en"], cur["de"], ans)
+    context.user_data["pl_scores"].append((cur["level"], score))
+    mark = "✅" if score >= 7 else ("⚠️" if score >= 4 else "❌")
+    await update.message.reply_text(f"{mark} {score}/10\nCorrect: {cur['de']}")
+    i += 1
+    context.user_data["pl_index"] = i
+    if i >= len(s):
+        await finish_placement(update, context)
+    else:
+        await send_placement_question(update, context)
+
+
+async def finish_placement(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    scores = context.user_data.get("pl_scores", [])
+    context.user_data["mode"] = None
+    rec, passed, by = _recommend_level(scores)
+    lines = ["📊 Your placement result:"]
+    for lvl in LEVELS:
+        vals = by.get(lvl, [])
+        if vals:
+            avg = round(sum(vals) / len(vals), 1)
+            lines.append(f"{lvl}: {avg}/10 " + ("✅" if passed[lvl] else ""))
+    lines.append("")
+    lines.append(f"👉 Recommended start: {rec}")
+    await update.effective_chat.send_message("\n".join(lines))
+    tg_id = update.effective_user.id
+    prog = await progress_map(tg_id, rec)
+    await update.effective_chat.send_message(
+        f"Level {rec} - pick a topic:",
+        reply_markup=topics_keyboard(rec, prog),
+    )
+
+
 async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     q = update.callback_query
     await q.answer()
     data = q.data
     tg_id = update.effective_user.id
     await touch_user(tg_id)
+
+    if data == "pl:start":
+        await start_placement(update, context)
+        return
+    if data == "pl:skip":
+        context.user_data["mode"] = None
+        await show_levels(update, context, greeting="No problem 🇩🇪")
+        return
 
     if data == "back:levels":
         context.user_data["mode"] = None
@@ -703,6 +879,7 @@ async def main():
     app = ApplicationBuilder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("report", report))
+    app.add_handler(CommandHandler("test", start_placement))
     app.add_handler(CallbackQueryHandler(on_callback))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, on_text))
 
