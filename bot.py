@@ -23,7 +23,7 @@ from typing import List, Dict, Optional, Tuple
 import asyncpg
 import aiohttp
 from aiohttp import web
-from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
+from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup
 from telegram.constants import ChatAction
 from telegram.ext import (
     ApplicationBuilder,
@@ -39,6 +39,13 @@ logging.basicConfig(
     level=logging.INFO,
 )
 log = logging.getLogger("deutschbot")
+
+# Pre-authored lessons (grammar/vocab note + questions). Lessons not listed here
+# fall back to AI generation, so nothing breaks while content is being written.
+try:
+    from lessons import LESSONS
+except Exception:  # noqa: BLE001
+    LESSONS = {}
 
 # ----------------------------- Config -----------------------------
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
@@ -388,6 +395,13 @@ async def get_placement_set() -> List[Dict]:
 
 
 # ----------------------------- Keyboards -----------------------------
+LEVEL_TEST_BTN = "📊 Level Test"
+
+
+def main_reply_kb() -> ReplyKeyboardMarkup:
+    return ReplyKeyboardMarkup([[LEVEL_TEST_BTN]], resize_keyboard=True)
+
+
 def levels_keyboard() -> InlineKeyboardMarkup:
     rows, row = [], []
     for lv in LEVELS:
@@ -470,7 +484,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         context.user_data["mode"] = "register"
         await update.message.reply_text(WELCOME)
         return
-    await show_levels(update, context, greeting=f"Hi {user['name']}! 🇩🇪")
+    await update.message.reply_text(f"Hi {user['name']}! 🇩🇪", reply_markup=main_reply_kb())
+    await show_levels(update, context)
 
 
 async def show_levels(update: Update, context: ContextTypes.DEFAULT_TYPE, greeting: str = "Choose your level:"):
@@ -486,13 +501,17 @@ async def on_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     tg_id = update.effective_user.id
     await touch_user(tg_id)
 
+    if (update.message.text or "").strip() == LEVEL_TEST_BTN:
+        await start_placement(update, context)
+        return
+
     if mode == "register":
         name = (update.message.text or "").strip()[:50] or "Freund"
         uname = update.effective_user.username
         await create_user(tg_id, name, uname)
         context.user_data["mode"] = None
         await notify_admin(context, update.effective_user, name)
-        await update.message.reply_text(f"Welcome, {name}! ✅")
+        await update.message.reply_text(f"Welcome, {name}! ✅", reply_markup=main_reply_kb())
         kb = InlineKeyboardMarkup([
             [InlineKeyboardButton("📊 Take placement test", callback_data="pl:start")],
             [InlineKeyboardButton("Skip - choose myself", callback_data="pl:skip")],
@@ -543,6 +562,29 @@ async def start_topic(update: Update, context: ContextTypes.DEFAULT_TYPE, level:
     q = update.callback_query
     tg_id = update.effective_user.id
 
+    lesson = LESSONS.get((level, key))
+    if lesson:
+        # Pre-authored lesson: show the grammar/vocab note first, then questions on tap.
+        questions = lesson["questions"]
+        idx, done = await get_progress(tg_id, key, level)
+        if done or idx >= len(questions):
+            await q.edit_message_text(
+                f"You've already completed this lesson at level {level}! ✅\nGo again?",
+                reply_markup=finished_keyboard(level, key),
+            )
+            return
+        label = "Start ▶️" if idx == 0 else f"Continue ▶️ ({idx}/{len(questions)})"
+        kb = InlineKeyboardMarkup([
+            [InlineKeyboardButton(label, callback_data=f"go:{level}:{key}")],
+            [InlineKeyboardButton("🔙 Topics", callback_data=f"back:topics:{level}")],
+        ])
+        await q.edit_message_text(
+            f"📖 {TOPIC_TITLE[key]} - {level}\n\n{lesson['note']}",
+            reply_markup=kb,
+        )
+        return
+
+    # Fallback: AI-generated lesson (no note), cached after the first run.
     sentences = await get_content(key, level)
     if sentences is None:
         await q.edit_message_text(
@@ -755,6 +797,23 @@ async def on_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if data.startswith("top:"):
         _, level, key = data.split(":", 2)
         await start_topic(update, context, level, key)
+        return
+
+    if data.startswith("go:"):
+        _, level, key = data.split(":", 2)
+        lesson = LESSONS.get((level, key))
+        if not lesson:
+            return
+        questions = lesson["questions"]
+        idx, done = await get_progress(tg_id, key, level)
+        if done or idx >= len(questions):
+            idx = 0
+        context.user_data["mode"] = "practice"
+        context.user_data["level"] = level
+        context.user_data["topic"] = key
+        context.user_data["sentences"] = questions
+        context.user_data["index"] = idx
+        await send_sentence(update, context, edit=True)
         return
 
     if data.startswith("restart:"):
