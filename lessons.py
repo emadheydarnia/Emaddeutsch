@@ -273,5 +273,243 @@ LESSONS = {
         ],
     },
 
+    ("A1", "sports"): {
+        "note": (
+            "📖 Sports — A1\n\n"
+            "THE ACCUSATIVE CASE (Akkusativ) — the direct object (what receives the action).\n"
+            "Only the MASCULINE article changes; die / das / plural stay the same.\n"
+            "  der → den    ·    ein → einen\n"
+            "  die → die     ·    eine → eine\n"
+            "  das → das     ·    ein → ein\n\n"
+            "• Wir gewinnen das Spiel.  ·  Ich kaufe einen Ball.\n"
+            "• Most sports/games take NO article: Ich spiele Fußball. · Ich mache Sport.\n\n"
+            "USEFUL VERBS\n"
+            "spielen (play) · machen (do) · trainieren (train) · laufen (run) · "
+            "gewinnen (win) · verlieren (lose) · schwimmen (swim)\n\n"
+            "VOCAB: der Fußball, der Ball, der Sport, das Spiel, die Mannschaft (team), "
+            "das Schwimmbad, das Stadion, das Tor (goal), der Trainer, der Spieler.\n\n"
+            "Tap Start: 40 sentences, easy → harder. 💪"
+        ),
+        "questions": [
+            {"en": "I play football.", "de": "Ich spiele Fußball."},
+            {"en": "We play tennis.", "de": "Wir spielen Tennis."},
+            {"en": "He plays basketball.", "de": "Er spielt Basketball."},
+            {"en": "I do sport every day.", "de": "Ich mache jeden Tag Sport."},
+            {"en": "She swims very fast.", "de": "Sie schwimmt sehr schnell."},
+            {"en": "They train on Mondays.", "de": "Sie trainieren montags."},
+            {"en": "I buy a ball.", "de": "Ich kaufe einen Ball."},
+            {"en": "We win the game.", "de": "Wir gewinnen das Spiel."},
+            {"en": "The team is very good.", "de": "Die Mannschaft ist sehr gut."},
+            {"en": "I run in the park.", "de": "Ich laufe im Park."},
+            {"en": "Do you play tennis?", "de": "Spielst du Tennis?"},
+            {"en": "He has a new trainer.", "de": "Er hat einen neuen Trainer."},
+            {"en": "We lose the game.", "de": "Wir verlieren das Spiel."},
+            {"en": "I need new shoes.", "de": "Ich brauche neue Schuhe."},
+            {"en": "She plays volleyball.", "de": "Sie spielt Volleyball."},
+            {"en": "The match starts at three.", "de": "Das Spiel beginnt um drei."},
+            {"en": "I watch the game.", "de": "Ich sehe das Spiel."},
+            {"en": "We go to the stadium.", "de": "Wir gehen ins Stadion."},
+            {"en": "He scores a goal.", "de": "Er schießt ein Tor."},
+            {"en": "My brother plays handball.", "de": "Mein Bruder spielt Handball."},
+            {"en": "I like sport.", "de": "Ich mag Sport."},
+            {"en": "The pool is closed today.", "de": "Das Schwimmbad ist heute geschlossen."},
+            {"en": "We train hard.", "de": "Wir trainieren hart."},
+            {"en": "She wins the race.", "de": "Sie gewinnt das Rennen."},
+            {"en": "Do you do yoga?", "de": "Machst du Yoga?"},
+            {"en": "I play football with my friends.", "de": "Ich spiele Fußball mit meinen Freunden."},
+            {"en": "The team has a good trainer.", "de": "Die Mannschaft hat einen guten Trainer."},
+            {"en": "He runs ten kilometers.", "de": "Er läuft zehn Kilometer."},
+            {"en": "We play a game.", "de": "Wir spielen ein Spiel."},
+            {"en": "I take my ball.", "de": "Ich nehme meinen Ball."},
+            {"en": "They have a big stadium.", "de": "Sie haben ein großes Stadion."},
+            {"en": "She trains every evening.", "de": "Sie trainiert jeden Abend."},
+            {"en": "I love football.", "de": "Ich liebe Fußball."},
+            {"en": "Our team wins often.", "de": "Unsere Mannschaft gewinnt oft."},
+            {"en": "He is a good player.", "de": "Er ist ein guter Spieler."},
+            {"en": "I play tennis on Sundays.", "de": "Ich spiele sonntags Tennis."},
+            {"en": "We need a new ball.", "de": "Wir brauchen einen neuen Ball."},
+            {"en": "The game is very exciting.", "de": "Das Spiel ist sehr spannend."},
+            {"en": "Do you watch football?", "de": "Schaust du Fußball?"},
+            {"en": "Sport keeps me healthy.", "de": "Sport hält mich gesund."},
+        ],
+    },
+
+    ("A1", "food"): {
+        "note": (
+            "📖 Food — A1\n\n"
+            "Talking about food uses the Akkusativ (the thing you eat / buy / want). "
+            "Only masculine changes: der→den, ein→einen.\n\n"
+            "KEY VERBS\n"
+            "essen: ich esse, du isst, er isst · trinken: ich trinke, du trinkst\n"
+            "nehmen: ich nehme, du nimmst, er nimmt · "
+            "möchten (would like): ich möchte, du möchtest · mögen (like): ich mag, du magst\n\n"
+            "• Ich esse einen Apfel.  ·  Ich trinke einen Kaffee.\n"
+            "• Ich möchte ein Wasser, bitte.  ·  Ich mag Schokolade.\n"
+            "With möchten, the main verb goes to the end: Ich möchte einen Tee trinken.\n\n"
+            "VOCAB: das Brot, der Apfel, der Käse, das Ei, der Reis, die Suppe, das Fleisch, "
+            "der Fisch, das Wasser, der Kaffee, der Tee, der Saft, die Milch, das Gemüse, das Obst.\n\n"
+            "Tap Start: 40 sentences, easy → harder. 💪"
+        ),
+        "questions": [
+            {"en": "I eat an apple.", "de": "Ich esse einen Apfel."},
+            {"en": "I drink water.", "de": "Ich trinke Wasser."},
+            {"en": "She eats bread.", "de": "Sie isst Brot."},
+            {"en": "We drink coffee.", "de": "Wir trinken Kaffee."},
+            {"en": "I would like a tea.", "de": "Ich möchte einen Tee."},
+            {"en": "He eats fish.", "de": "Er isst Fisch."},
+            {"en": "I like cheese.", "de": "Ich mag Käse."},
+            {"en": "Do you eat meat?", "de": "Isst du Fleisch?"},
+            {"en": "I would like a water, please.", "de": "Ich möchte ein Wasser, bitte."},
+            {"en": "We eat rice.", "de": "Wir essen Reis."},
+            {"en": "She drinks milk.", "de": "Sie trinkt Milch."},
+            {"en": "I take a coffee.", "de": "Ich nehme einen Kaffee."},
+            {"en": "The soup is hot.", "de": "Die Suppe ist heiß."},
+            {"en": "Do you like chocolate?", "de": "Magst du Schokolade?"},
+            {"en": "I eat vegetables every day.", "de": "Ich esse jeden Tag Gemüse."},
+            {"en": "He drinks a juice.", "de": "Er trinkt einen Saft."},
+            {"en": "I would like an apple.", "de": "Ich möchte einen Apfel."},
+            {"en": "We buy bread and cheese.", "de": "Wir kaufen Brot und Käse."},
+            {"en": "She doesn't eat meat.", "de": "Sie isst kein Fleisch."},
+            {"en": "I am hungry.", "de": "Ich habe Hunger."},
+            {"en": "I am thirsty.", "de": "Ich habe Durst."},
+            {"en": "The bread is fresh.", "de": "Das Brot ist frisch."},
+            {"en": "Do you want a tea or a coffee?", "de": "Möchtest du einen Tee oder einen Kaffee?"},
+            {"en": "I eat an egg in the morning.", "de": "Ich esse morgens ein Ei."},
+            {"en": "We like fruit.", "de": "Wir mögen Obst."},
+            {"en": "He takes the fish.", "de": "Er nimmt den Fisch."},
+            {"en": "The coffee is too hot.", "de": "Der Kaffee ist zu heiß."},
+            {"en": "I would like to drink a water.", "de": "Ich möchte ein Wasser trinken."},
+            {"en": "She eats a lot of vegetables.", "de": "Sie isst viel Gemüse."},
+            {"en": "We cook a soup.", "de": "Wir kochen eine Suppe."},
+            {"en": "Do you like fish?", "de": "Magst du Fisch?"},
+            {"en": "I drink tea without sugar.", "de": "Ich trinke Tee ohne Zucker."},
+            {"en": "The meal is delicious.", "de": "Das Essen ist lecker."},
+            {"en": "I buy fruit at the market.", "de": "Ich kaufe Obst auf dem Markt."},
+            {"en": "He eats too much chocolate.", "de": "Er isst zu viel Schokolade."},
+            {"en": "We would like the menu, please.", "de": "Wir möchten die Speisekarte, bitte."},
+            {"en": "I don't drink coffee.", "de": "Ich trinke keinen Kaffee."},
+            {"en": "She likes apples and bananas.", "de": "Sie mag Äpfel und Bananen."},
+            {"en": "The restaurant is very good.", "de": "Das Restaurant ist sehr gut."},
+            {"en": "I would like to order a pizza.", "de": "Ich möchte eine Pizza bestellen."},
+        ],
+    },
+
+    ("A1", "education"): {
+        "note": (
+            "📖 Education — A1\n\n"
+            "MODAL VERB können (can / to be able to).\n"
+            "A modal needs a second verb in the INFINITIVE, which goes to the END.\n"
+            "ich kann · du kannst · er/sie kann · wir können · ihr könnt · sie/Sie können\n\n"
+            "• Ich kann Deutsch sprechen.  → I can speak German.\n"
+            "• Kannst du mir helfen?  → Can you help me?\n"
+            "The modal is in position 2; the main verb is last.\n\n"
+            "VOCAB: die Schule, die Universität, der Lehrer/die Lehrerin, der Schüler, "
+            "der Student, das Fach (subject), die Prüfung (exam), die Hausaufgaben (homework), "
+            "lernen, verstehen, lesen, schreiben.\n"
+            "SUBJECTS: Mathe, Deutsch, Englisch, Biologie, Geschichte, Kunst, Sport, Musik.\n\n"
+            "Tap Start: 40 sentences, easy → harder. 💪"
+        ),
+        "questions": [
+            {"en": "I can speak German.", "de": "Ich kann Deutsch sprechen."},
+            {"en": "Can you help me?", "de": "Kannst du mir helfen?"},
+            {"en": "She can read well.", "de": "Sie kann gut lesen."},
+            {"en": "We learn English at school.", "de": "Wir lernen Englisch in der Schule."},
+            {"en": "He can write fast.", "de": "Er kann schnell schreiben."},
+            {"en": "I study every evening.", "de": "Ich lerne jeden Abend."},
+            {"en": "Can you understand me?", "de": "Kannst du mich verstehen?"},
+            {"en": "The teacher is very nice.", "de": "Der Lehrer ist sehr nett."},
+            {"en": "I have homework today.", "de": "Ich habe heute Hausaufgaben."},
+            {"en": "We can ask a question.", "de": "Wir können eine Frage stellen."},
+            {"en": "She studies at the university.", "de": "Sie studiert an der Universität."},
+            {"en": "Can I open the window?", "de": "Kann ich das Fenster öffnen?"},
+            {"en": "My favorite subject is math.", "de": "Mein Lieblingsfach ist Mathe."},
+            {"en": "The exam is on Monday.", "de": "Die Prüfung ist am Montag."},
+            {"en": "He cannot come today.", "de": "Er kann heute nicht kommen."},
+            {"en": "I want to learn German.", "de": "Ich möchte Deutsch lernen."},
+            {"en": "Can you repeat that, please?", "de": "Kannst du das bitte wiederholen?"},
+            {"en": "We read a book in class.", "de": "Wir lesen ein Buch im Unterricht."},
+            {"en": "She can speak three languages.", "de": "Sie kann drei Sprachen sprechen."},
+            {"en": "The students are in the classroom.", "de": "Die Schüler sind im Klassenzimmer."},
+            {"en": "I don't understand the question.", "de": "Ich verstehe die Frage nicht."},
+            {"en": "Can we work together?", "de": "Können wir zusammenarbeiten?"},
+            {"en": "He learns very quickly.", "de": "Er lernt sehr schnell."},
+            {"en": "I write the answer.", "de": "Ich schreibe die Antwort."},
+            {"en": "Can you explain that?", "de": "Kannst du das erklären?"},
+            {"en": "The lesson begins at eight.", "de": "Der Unterricht beginnt um acht."},
+            {"en": "I have an exam tomorrow.", "de": "Ich habe morgen eine Prüfung."},
+            {"en": "She can help you.", "de": "Sie kann dir helfen."},
+            {"en": "We learn a lot.", "de": "Wir lernen viel."},
+            {"en": "Can I ask something?", "de": "Kann ich etwas fragen?"},
+            {"en": "My teacher speaks English.", "de": "Mein Lehrer spricht Englisch."},
+            {"en": "He does his homework.", "de": "Er macht seine Hausaufgaben."},
+            {"en": "I cannot find my book.", "de": "Ich kann mein Buch nicht finden."},
+            {"en": "Can you read this word?", "de": "Kannst du dieses Wort lesen?"},
+            {"en": "The university is very big.", "de": "Die Universität ist sehr groß."},
+            {"en": "We study together.", "de": "Wir lernen zusammen."},
+            {"en": "She wants to become a teacher.", "de": "Sie möchte Lehrerin werden."},
+            {"en": "I can answer the question.", "de": "Ich kann die Frage beantworten."},
+            {"en": "The book is very interesting.", "de": "Das Buch ist sehr interessant."},
+            {"en": "Education is very important.", "de": "Bildung ist sehr wichtig."},
+        ],
+    },
+
+    ("A1", "work"): {
+        "note": (
+            "📖 Work — A1\n\n"
+            "MORE MODAL VERBS (second verb → infinitive at the end).\n"
+            "müssen (must / have to): ich muss · du musst · er muss · wir müssen · ihr müsst · sie müssen\n"
+            "wollen (want to): ich will · du willst · er will · wir wollen · ihr wollt · sie wollen\n\n"
+            "• Ich muss um acht arbeiten.  ·  Ich will Geld verdienen.\n\n"
+            "TELLING THE TIME\n"
+            "Wie spät ist es? — What time is it? · Es ist acht Uhr. · um neun Uhr · halb zehn (9:30).\n\n"
+            "VOCAB: die Arbeit, der Job, der Beruf, das Büro, der Chef, der Kollege, die Firma, "
+            "arbeiten, verdienen (earn), pünktlich (on time).\n"
+            "JOBS: der Arzt/die Ärztin, der Lehrer, der Ingenieur, die Verkäuferin, der Koch.\n\n"
+            "Tap Start: 40 sentences, easy → harder. 💪"
+        ),
+        "questions": [
+            {"en": "I work in an office.", "de": "Ich arbeite in einem Büro."},
+            {"en": "She is a doctor.", "de": "Sie ist Ärztin."},
+            {"en": "I have to work today.", "de": "Ich muss heute arbeiten."},
+            {"en": "He wants to earn money.", "de": "Er will Geld verdienen."},
+            {"en": "What time is it?", "de": "Wie spät ist es?"},
+            {"en": "It is eight o'clock.", "de": "Es ist acht Uhr."},
+            {"en": "I start at nine.", "de": "Ich beginne um neun."},
+            {"en": "My boss is very nice.", "de": "Mein Chef ist sehr nett."},
+            {"en": "We have to work a lot.", "de": "Wir müssen viel arbeiten."},
+            {"en": "She wants to be a teacher.", "de": "Sie will Lehrerin werden."},
+            {"en": "I work from nine to five.", "de": "Ich arbeite von neun bis fünf."},
+            {"en": "He works in a factory.", "de": "Er arbeitet in einer Fabrik."},
+            {"en": "Do you have to work tomorrow?", "de": "Musst du morgen arbeiten?"},
+            {"en": "I want to find a new job.", "de": "Ich will einen neuen Job finden."},
+            {"en": "My colleague is friendly.", "de": "Mein Kollege ist freundlich."},
+            {"en": "The meeting starts at ten.", "de": "Das Meeting beginnt um zehn."},
+            {"en": "I must call the boss.", "de": "Ich muss den Chef anrufen."},
+            {"en": "She works as a nurse.", "de": "Sie arbeitet als Krankenschwester."},
+            {"en": "We want to work together.", "de": "Wir wollen zusammenarbeiten."},
+            {"en": "I have to go now.", "de": "Ich muss jetzt gehen."},
+            {"en": "He earns a lot of money.", "de": "Er verdient viel Geld."},
+            {"en": "My job is very interesting.", "de": "Mein Job ist sehr interessant."},
+            {"en": "I work every day.", "de": "Ich arbeite jeden Tag."},
+            {"en": "She has to write an email.", "de": "Sie muss eine E-Mail schreiben."},
+            {"en": "What is your job?", "de": "Was bist du von Beruf?"},
+            {"en": "I am an engineer.", "de": "Ich bin Ingenieur."},
+            {"en": "We want to start a company.", "de": "Wir wollen eine Firma gründen."},
+            {"en": "The office is in the city.", "de": "Das Büro ist in der Stadt."},
+            {"en": "He has to work on Saturday.", "de": "Er muss am Samstag arbeiten."},
+            {"en": "I want to learn a lot.", "de": "Ich will viel lernen."},
+            {"en": "My salary is good.", "de": "Mein Gehalt ist gut."},
+            {"en": "She works at a bank.", "de": "Sie arbeitet bei einer Bank."},
+            {"en": "I have to be on time.", "de": "Ich muss pünktlich sein."},
+            {"en": "Do you want to work here?", "de": "Willst du hier arbeiten?"},
+            {"en": "He is a good cook.", "de": "Er ist ein guter Koch."},
+            {"en": "We are done at six.", "de": "Wir sind um sechs fertig."},
+            {"en": "I want to help my colleagues.", "de": "Ich will meinen Kollegen helfen."},
+            {"en": "The work is very hard.", "de": "Die Arbeit ist sehr schwer."},
+            {"en": "She must learn German for her job.", "de": "Sie muss für ihren Job Deutsch lernen."},
+            {"en": "I want to be successful.", "de": "Ich will erfolgreich sein."},
+        ],
+    },
+
     # === append new lessons above this line ===
 }
