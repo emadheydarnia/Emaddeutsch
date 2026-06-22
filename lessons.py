@@ -1813,5 +1813,819 @@ LESSONS = {
         ],
     },
 
+    ("A2", "health"): {
+        "note": (
+            "📖 Health — A2\n\n"
+            "REFLEXIVE VERBS (sich)\n"
+            "Some verbs need a reflexive pronoun referring back to the subject.\n"
+            "Akkusative pronouns: mich, dich, sich, uns, euch, sich.\n"
+            "  sich fühlen: Ich fühle mich gut.\n"
+            "  sich ausruhen: Er ruht sich aus.\n"
+            "  sich erkälten: Ich habe mich erkältet.\n"
+            "In the Perfekt the pronoun comes right after haben:\n"
+            "  Ich habe mich erkältet.  ·  Sie hat sich ausgeruht.\n\n"
+            "DATIVE reflexive (with another object):\n"
+            "  Ich putze mir die Zähne.  ·  Ich wasche mir die Hände.\n\n"
+            "Tap Start: 40 sentences, easy → harder. 💪"
+        ),
+        "questions": [
+            {"en": "I feel good.", "de": "Ich fühle mich gut."},
+            {"en": "I do not feel well.", "de": "Ich fühle mich nicht gut."},
+            {"en": "He rests.", "de": "Er ruht sich aus."},
+            {"en": "I caught a cold.", "de": "Ich habe mich erkältet."},
+            {"en": "She feels tired.", "de": "Sie fühlt sich müde."},
+            {"en": "We relax at home.", "de": "Wir entspannen uns zu Hause."},
+            {"en": "How do you feel?", "de": "Wie fühlst du dich?"},
+            {"en": "I have to rest.", "de": "Ich muss mich ausruhen."},
+            {"en": "He feels better today.", "de": "Er fühlt sich heute besser."},
+            {"en": "I brush my teeth.", "de": "Ich putze mir die Zähne."},
+            {"en": "She rested all day.", "de": "Sie hat sich den ganzen Tag ausgeruht."},
+            {"en": "Do you feel sick?", "de": "Fühlst du dich krank?"},
+            {"en": "I am looking forward to the holiday.", "de": "Ich freue mich auf den Urlaub."},
+            {"en": "We move too little.", "de": "Wir bewegen uns zu wenig."},
+            {"en": "He caught a cold last week.", "de": "Er hat sich letzte Woche erkältet."},
+            {"en": "I need to relax.", "de": "Ich muss mich entspannen."},
+            {"en": "She feels healthy.", "de": "Sie fühlt sich gesund."},
+            {"en": "I washed my hands.", "de": "Ich habe mir die Hände gewaschen."},
+            {"en": "We feel comfortable here.", "de": "Wir fühlen uns hier wohl."},
+            {"en": "He rests after work.", "de": "Er ruht sich nach der Arbeit aus."},
+            {"en": "I feel weak.", "de": "Ich fühle mich schwach."},
+            {"en": "Don't worry.", "de": "Mach dir keine Sorgen."},
+            {"en": "She is glad about the news.", "de": "Sie freut sich über die Nachricht."},
+            {"en": "I feel much better now.", "de": "Ich fühle mich jetzt viel besser."},
+            {"en": "We should move more.", "de": "Wir sollen uns mehr bewegen."},
+            {"en": "He did not feel well yesterday.", "de": "Er hat sich gestern nicht wohl gefühlt."},
+            {"en": "I relax with music.", "de": "Ich entspanne mich mit Musik."},
+            {"en": "Take care of yourself.", "de": "Pass auf dich auf."},
+            {"en": "She feels at home here.", "de": "Sie fühlt sich hier zu Hause."},
+            {"en": "I rested for an hour.", "de": "Ich habe mich eine Stunde ausgeruht."},
+            {"en": "We are looking forward to the weekend.", "de": "Wir freuen uns auf das Wochenende."},
+            {"en": "He feels stressed.", "de": "Er fühlt sich gestresst."},
+            {"en": "I catch a cold every winter.", "de": "Ich erkälte mich jeden Winter."},
+            {"en": "She takes care of her health.", "de": "Sie kümmert sich um ihre Gesundheit."},
+            {"en": "I feel fit again.", "de": "Ich fühle mich wieder fit."},
+            {"en": "Relax a little!", "de": "Entspann dich ein bisschen!"},
+            {"en": "He hurt himself.", "de": "Er hat sich verletzt."},
+            {"en": "I feel calm.", "de": "Ich fühle mich ruhig."},
+            {"en": "We rested well.", "de": "Wir haben uns gut ausgeruht."},
+            {"en": "If you rest, you feel better.", "de": "Wenn du dich ausruhst, fühlst du dich besser."},
+        ],
+    },
+
+    ("A2", "books_films"): {
+        "note": (
+            "📖 Books and Films — A2\n\n"
+            "SUBORDINATE CLAUSES with wenn (when / if)\n"
+            "wenn introduces a condition or a repeated/future time. The verb goes to the END.\n"
+            "If the wenn-clause comes FIRST, the main clause starts with its verb (verb, verb):\n"
+            "• Wenn ich Zeit habe, lese ich ein Buch.\n"
+            "   (habe = end of wenn-clause; lese = first word of the main clause)\n"
+            "• Ich sehe einen Film, wenn ich müde bin.\n"
+            "wenn = \"if\" (condition) AND \"when(ever)\" (repeated time).\n"
+            "For a SINGLE past event use als instead:\n"
+            "• Als ich jung war, habe ich viel gelesen.\n\n"
+            "Tap Start: 40 sentences, easy → harder. 💪"
+        ),
+        "questions": [
+            {"en": "When I have time, I read a book.", "de": "Wenn ich Zeit habe, lese ich ein Buch."},
+            {"en": "I watch a film when I am tired.", "de": "Ich sehe einen Film, wenn ich müde bin."},
+            {"en": "If it rains, we stay home.", "de": "Wenn es regnet, bleiben wir zu Hause."},
+            {"en": "When she is sad, she watches a comedy.", "de": "Wenn sie traurig ist, sieht sie eine Komödie."},
+            {"en": "If you want, we can watch a film.", "de": "Wenn du willst, können wir einen Film sehen."},
+            {"en": "When I read, I forget the time.", "de": "Wenn ich lese, vergesse ich die Zeit."},
+            {"en": "I am happy when the film is good.", "de": "Ich bin glücklich, wenn der Film gut ist."},
+            {"en": "If the book is boring, I stop reading.", "de": "Wenn das Buch langweilig ist, höre ich auf zu lesen."},
+            {"en": "When he has money, he buys books.", "de": "Wenn er Geld hat, kauft er Bücher."},
+            {"en": "We go to the cinema when there is a good film.", "de": "Wir gehen ins Kino, wenn es einen guten Film gibt."},
+            {"en": "If you like the book, I lend it to you.", "de": "Wenn dir das Buch gefällt, leihe ich es dir."},
+            {"en": "When I was young, I read a lot.", "de": "Als ich jung war, habe ich viel gelesen."},
+            {"en": "I relax when I watch a series.", "de": "Ich entspanne mich, wenn ich eine Serie sehe."},
+            {"en": "If the story is sad, I cry.", "de": "Wenn die Geschichte traurig ist, weine ich."},
+            {"en": "When the children sleep, we watch a film.", "de": "Wenn die Kinder schlafen, sehen wir einen Film."},
+            {"en": "I read in the evening when I am free.", "de": "Ich lese am Abend, wenn ich frei bin."},
+            {"en": "If you have questions, ask me.", "de": "Wenn du Fragen hast, frag mich."},
+            {"en": "When I travel, I always take a book.", "de": "Wenn ich reise, nehme ich immer ein Buch mit."},
+            {"en": "We are quiet when the film starts.", "de": "Wir sind leise, wenn der Film beginnt."},
+            {"en": "If the cinema is full, we go home.", "de": "Wenn das Kino voll ist, gehen wir nach Hause."},
+            {"en": "When he reads, he drinks tea.", "de": "Wenn er liest, trinkt er Tee."},
+            {"en": "I am bored when the film is long.", "de": "Mir ist langweilig, wenn der Film lang ist."},
+            {"en": "If you finish the book, tell me.", "de": "Wenn du das Buch zu Ende liest, sag mir Bescheid."},
+            {"en": "When she has time, she writes stories.", "de": "Wenn sie Zeit hat, schreibt sie Geschichten."},
+            {"en": "We laugh when the film is funny.", "de": "Wir lachen, wenn der Film lustig ist."},
+            {"en": "If it is cold, I read under a blanket.", "de": "Wenn es kalt ist, lese ich unter einer Decke."},
+            {"en": "When I was a child, I loved cartoons.", "de": "Als ich ein Kind war, habe ich Zeichentrickfilme geliebt."},
+            {"en": "I buy the book if it is cheap.", "de": "Ich kaufe das Buch, wenn es billig ist."},
+            {"en": "When the season ends, I am sad.", "de": "Wenn die Staffel endet, bin ich traurig."},
+            {"en": "If you come, we watch it together.", "de": "Wenn du kommst, sehen wir ihn zusammen."},
+            {"en": "I read the news when I wake up.", "de": "Ich lese die Nachrichten, wenn ich aufwache."},
+            {"en": "When the music plays, I relax.", "de": "Wenn die Musik spielt, entspanne ich mich."},
+            {"en": "If the film is boring, we leave.", "de": "Wenn der Film langweilig ist, gehen wir."},
+            {"en": "When he writes, he needs quiet.", "de": "Wenn er schreibt, braucht er Ruhe."},
+            {"en": "I watch a documentary when I want to learn.", "de": "Ich sehe eine Dokumentation, wenn ich lernen will."},
+            {"en": "If you press play, the film starts.", "de": "Wenn du auf Play drückst, beginnt der Film."},
+            {"en": "When I finish work, I read.", "de": "Wenn ich mit der Arbeit fertig bin, lese ich."},
+            {"en": "We celebrate when our team wins.", "de": "Wir feiern, wenn unser Team gewinnt."},
+            {"en": "If you read every day, you learn fast.", "de": "Wenn du jeden Tag liest, lernst du schnell."},
+            {"en": "When a book is good, I cannot stop.", "de": "Wenn ein Buch gut ist, kann ich nicht aufhören."},
+        ],
+    },
+
+    ("A2", "accommodation"): {
+        "note": (
+            "📖 Accommodation — A2\n\n"
+            "TWO-WAY PREPOSITIONS (Wechselpräpositionen)\n"
+            "Nine prepositions take EITHER the Akkusativ OR the Dativ:\n"
+            "  in, an, auf, über, unter, vor, hinter, neben, zwischen.\n"
+            "• MOVEMENT / direction (wohin?) → AKKUSATIV\n"
+            "  Ich gehe in die Küche.  ·  Ich stelle die Lampe auf den Tisch.\n"
+            "• LOCATION (wo?) → DATIV\n"
+            "  Ich bin in der Küche.  ·  Die Lampe steht auf dem Tisch.\n\n"
+            "Test: change of place = Akkusativ; staying put = Dativ.\n"
+            "Putting: stellen / legen / hängen (+ Akk). Being: stehen / liegen / hängen (+ Dat).\n\n"
+            "Tap Start: 40 sentences, easy → harder. 💪"
+        ),
+        "questions": [
+            {"en": "I go into the kitchen.", "de": "Ich gehe in die Küche."},
+            {"en": "I am in the kitchen.", "de": "Ich bin in der Küche."},
+            {"en": "I put the lamp on the table.", "de": "Ich stelle die Lampe auf den Tisch."},
+            {"en": "The lamp is on the table.", "de": "Die Lampe steht auf dem Tisch."},
+            {"en": "He hangs the picture on the wall.", "de": "Er hängt das Bild an die Wand."},
+            {"en": "The picture hangs on the wall.", "de": "Das Bild hängt an der Wand."},
+            {"en": "I put the book on the shelf.", "de": "Ich stelle das Buch ins Regal."},
+            {"en": "The book is on the shelf.", "de": "Das Buch steht im Regal."},
+            {"en": "We go into the living room.", "de": "Wir gehen ins Wohnzimmer."},
+            {"en": "We are in the living room.", "de": "Wir sind im Wohnzimmer."},
+            {"en": "She puts the keys on the table.", "de": "Sie legt die Schlüssel auf den Tisch."},
+            {"en": "The keys are on the table.", "de": "Die Schlüssel liegen auf dem Tisch."},
+            {"en": "I hang the jacket behind the door.", "de": "Ich hänge die Jacke hinter die Tür."},
+            {"en": "The jacket hangs behind the door.", "de": "Die Jacke hängt hinter der Tür."},
+            {"en": "He goes into the bathroom.", "de": "Er geht ins Bad."},
+            {"en": "He is in the bathroom.", "de": "Er ist im Bad."},
+            {"en": "I put the plant in front of the window.", "de": "Ich stelle die Pflanze vor das Fenster."},
+            {"en": "The plant is in front of the window.", "de": "Die Pflanze steht vor dem Fenster."},
+            {"en": "We put the sofa next to the wall.", "de": "Wir stellen das Sofa neben die Wand."},
+            {"en": "The sofa is next to the wall.", "de": "Das Sofa steht neben der Wand."},
+            {"en": "The cat goes under the bed.", "de": "Die Katze geht unter das Bett."},
+            {"en": "The cat is under the bed.", "de": "Die Katze ist unter dem Bett."},
+            {"en": "I put the bag on the chair.", "de": "Ich lege die Tasche auf den Stuhl."},
+            {"en": "The bag is on the chair.", "de": "Die Tasche liegt auf dem Stuhl."},
+            {"en": "She goes onto the balcony.", "de": "Sie geht auf den Balkon."},
+            {"en": "She is on the balcony.", "de": "Sie ist auf dem Balkon."},
+            {"en": "We hang the lamp over the table.", "de": "Wir hängen die Lampe über den Tisch."},
+            {"en": "The lamp hangs over the table.", "de": "Die Lampe hängt über dem Tisch."},
+            {"en": "I put the shoes in front of the door.", "de": "Ich stelle die Schuhe vor die Tür."},
+            {"en": "The shoes are in front of the door.", "de": "Die Schuhe stehen vor der Tür."},
+            {"en": "He puts the car in the garage.", "de": "Er stellt das Auto in die Garage."},
+            {"en": "The car is in the garage.", "de": "Das Auto steht in der Garage."},
+            {"en": "The children run into the garden.", "de": "Die Kinder laufen in den Garten."},
+            {"en": "The children are in the garden.", "de": "Die Kinder sind im Garten."},
+            {"en": "I put the cup between the plates.", "de": "Ich stelle die Tasse zwischen die Teller."},
+            {"en": "The cup is between the plates.", "de": "Die Tasse steht zwischen den Tellern."},
+            {"en": "We move the table into the corner.", "de": "Wir stellen den Tisch in die Ecke."},
+            {"en": "The table is in the corner.", "de": "Der Tisch steht in der Ecke."},
+            {"en": "She hangs the mirror over the sink.", "de": "Sie hängt den Spiegel über das Waschbecken."},
+            {"en": "If you put the lamp here, the room is brighter.", "de": "Wenn du die Lampe hierhin stellst, ist das Zimmer heller."},
+        ],
+    },
+
+    ("A2", "clothes_fashion"): {
+        "note": (
+            "📖 Clothes & Fashion — A2\n\n"
+            "ADJECTIVE ENDINGS after the DEFINITE article (der/die/das)\n"
+            "An adjective BEFORE a noun needs an ending. After der/die/das/die(pl):\n\n"
+            "             Nominative          Akkusative\n"
+            "  masc.   der rote Mantel    den roten Mantel\n"
+            "  fem.    die rote Jacke     die rote Jacke\n"
+            "  neut.   das rote Hemd      das rote Hemd\n"
+            "  plural  die roten Schuhe   die roten Schuhe\n\n"
+            "Rule: -e in the singular nominative (and fem/neut Akk); "
+            "-en for masculine Akkusativ and ALL plurals.\n"
+            "• Der blaue Pullover ist warm.  ·  Ich nehme den blauen Pullover.\n\n"
+            "Tap Start: 40 sentences, easy → harder. 💪"
+        ),
+        "questions": [
+            {"en": "The red jacket is beautiful.", "de": "Die rote Jacke ist schön."},
+            {"en": "I take the blue pullover.", "de": "Ich nehme den blauen Pullover."},
+            {"en": "The white shirt is clean.", "de": "Das weiße Hemd ist sauber."},
+            {"en": "The black shoes are expensive.", "de": "Die schwarzen Schuhe sind teuer."},
+            {"en": "I like the green dress.", "de": "Mir gefällt das grüne Kleid."},
+            {"en": "The new coat is warm.", "de": "Der neue Mantel ist warm."},
+            {"en": "I wear the black trousers.", "de": "Ich trage die schwarze Hose."},
+            {"en": "The red shoes are nice.", "de": "Die roten Schuhe sind schön."},
+            {"en": "She buys the yellow skirt.", "de": "Sie kauft den gelben Rock."},
+            {"en": "The old jacket is too small.", "de": "Die alte Jacke ist zu klein."},
+            {"en": "I want the warm pullover.", "de": "Ich möchte den warmen Pullover."},
+            {"en": "The blue dress fits well.", "de": "Das blaue Kleid passt gut."},
+            {"en": "The expensive shoes are comfortable.", "de": "Die teuren Schuhe sind bequem."},
+            {"en": "He takes the grey coat.", "de": "Er nimmt den grauen Mantel."},
+            {"en": "The pretty hat is new.", "de": "Die schöne Mütze ist neu."},
+            {"en": "I like the long coat.", "de": "Mir gefällt der lange Mantel."},
+            {"en": "The small shirt does not fit.", "de": "Das kleine Hemd passt nicht."},
+            {"en": "She wears the red scarf.", "de": "Sie trägt den roten Schal."},
+            {"en": "The cheap shoes are not good.", "de": "Die billigen Schuhe sind nicht gut."},
+            {"en": "I buy the warm jacket.", "de": "Ich kaufe die warme Jacke."},
+            {"en": "The white dress is elegant.", "de": "Das weiße Kleid ist elegant."},
+            {"en": "He likes the dark suit.", "de": "Ihm gefällt der dunkle Anzug."},
+            {"en": "I take the comfortable shoes.", "de": "Ich nehme die bequemen Schuhe."},
+            {"en": "The green pullover is too big.", "de": "Der grüne Pullover ist zu groß."},
+            {"en": "She buys the blue jeans.", "de": "Sie kauft die blaue Jeans."},
+            {"en": "The new shoes are great.", "de": "Die neuen Schuhe sind toll."},
+            {"en": "I wear the warm socks.", "de": "Ich trage die warmen Socken."},
+            {"en": "The black jacket is cool.", "de": "Die schwarze Jacke ist cool."},
+            {"en": "He takes the cheap shirt.", "de": "Er nimmt das billige Hemd."},
+            {"en": "The red dress is my favorite.", "de": "Das rote Kleid ist mein Lieblingskleid."},
+            {"en": "I like the soft pullover.", "de": "Mir gefällt der weiche Pullover."},
+            {"en": "The big hat is funny.", "de": "Der große Hut ist lustig."},
+            {"en": "She wears the elegant shoes.", "de": "Sie trägt die eleganten Schuhe."},
+            {"en": "I want the dark trousers.", "de": "Ich möchte die dunkle Hose."},
+            {"en": "The warm coat is perfect for winter.", "de": "Der warme Mantel ist perfekt für den Winter."},
+            {"en": "He buys the white sneakers.", "de": "Er kauft die weißen Sneaker."},
+            {"en": "The light jacket is for spring.", "de": "Die leichte Jacke ist für den Frühling."},
+            {"en": "I take the long dress.", "de": "Ich nehme das lange Kleid."},
+            {"en": "The new collection is beautiful.", "de": "Die neue Kollektion ist schön."},
+            {"en": "If you wear the red shirt, you look great.", "de": "Wenn du das rote Hemd trägst, siehst du toll aus."},
+        ],
+    },
+
+    ("A2", "personality"): {
+        "note": (
+            "📖 Personality — A2\n\n"
+            "ADJECTIVE ENDINGS after ein / kein / mein (indefinite & possessive)\n"
+            "Because ein has no ending in some forms, the adjective must show the gender. "
+            "Watch the masculine nominative (-er) and neuter (-es):\n\n"
+            "             Nominative              Akkusative\n"
+            "  masc.   ein netter Mann        einen netten Mann\n"
+            "  fem.    eine nette Frau        eine nette Frau\n"
+            "  neut.   ein nettes Kind        ein nettes Kind\n"
+            "  plural  meine netten Freunde   meine netten Freunde\n\n"
+            "After der/die/das the article shows gender, so the ending is mostly -e; "
+            "here the adjective takes over (-er / -es).\n"
+            "• Er ist ein freundlicher Mensch.  ·  Ich habe einen guten Freund.\n\n"
+            "Tap Start: 40 sentences, easy → harder. 💪"
+        ),
+        "questions": [
+            {"en": "He is a friendly man.", "de": "Er ist ein freundlicher Mann."},
+            {"en": "She is a nice woman.", "de": "Sie ist eine nette Frau."},
+            {"en": "It is a quiet child.", "de": "Es ist ein ruhiges Kind."},
+            {"en": "I have a good friend.", "de": "Ich habe einen guten Freund."},
+            {"en": "He is a funny person.", "de": "Er ist ein lustiger Mensch."},
+            {"en": "She has a kind heart.", "de": "Sie hat ein gutes Herz."},
+            {"en": "My best friend is honest.", "de": "Mein bester Freund ist ehrlich."},
+            {"en": "He is a serious student.", "de": "Er ist ein ernster Student."},
+            {"en": "I know a patient teacher.", "de": "Ich kenne einen geduldigen Lehrer."},
+            {"en": "She is a hard-working colleague.", "de": "Sie ist eine fleißige Kollegin."},
+            {"en": "He has a difficult character.", "de": "Er hat einen schwierigen Charakter."},
+            {"en": "It is a happy family.", "de": "Es ist eine glückliche Familie."},
+            {"en": "I have a polite neighbor.", "de": "Ich habe einen höflichen Nachbarn."},
+            {"en": "She is an open person.", "de": "Sie ist ein offener Mensch."},
+            {"en": "He is a shy boy.", "de": "Er ist ein schüchterner Junge."},
+            {"en": "My old friend lives here.", "de": "Mein alter Freund wohnt hier."},
+            {"en": "She has a strong personality.", "de": "Sie hat eine starke Persönlichkeit."},
+            {"en": "He is a reliable man.", "de": "Er ist ein zuverlässiger Mann."},
+            {"en": "I met a friendly woman.", "de": "Ich habe eine freundliche Frau getroffen."},
+            {"en": "It is a curious child.", "de": "Es ist ein neugieriges Kind."},
+            {"en": "He is a generous person.", "de": "Er ist ein großzügiger Mensch."},
+            {"en": "She is a calm woman.", "de": "Sie ist eine ruhige Frau."},
+            {"en": "I have a clever brother.", "de": "Ich habe einen klugen Bruder."},
+            {"en": "He is a brave man.", "de": "Er ist ein mutiger Mann."},
+            {"en": "My new colleague is nice.", "de": "Mein neuer Kollege ist nett."},
+            {"en": "She is a creative student.", "de": "Sie ist eine kreative Studentin."},
+            {"en": "He has a positive attitude.", "de": "Er hat eine positive Einstellung."},
+            {"en": "I know an honest man.", "de": "Ich kenne einen ehrlichen Mann."},
+            {"en": "It is a friendly dog.", "de": "Es ist ein freundlicher Hund."},
+            {"en": "She is a strict mother.", "de": "Sie ist eine strenge Mutter."},
+            {"en": "He is a lazy student.", "de": "Er ist ein fauler Student."},
+            {"en": "I have a funny uncle.", "de": "Ich habe einen lustigen Onkel."},
+            {"en": "She is a confident woman.", "de": "Sie ist eine selbstbewusste Frau."},
+            {"en": "He is a helpful neighbor.", "de": "Er ist ein hilfsbereiter Nachbar."},
+            {"en": "My little sister is shy.", "de": "Meine kleine Schwester ist schüchtern."},
+            {"en": "He is a good listener.", "de": "Er ist ein guter Zuhörer."},
+            {"en": "She has a warm smile.", "de": "Sie hat ein warmes Lächeln."},
+            {"en": "I have a true friend.", "de": "Ich habe einen wahren Freund."},
+            {"en": "He is an interesting man.", "de": "Er ist ein interessanter Mann."},
+            {"en": "A good friend is a treasure.", "de": "Ein guter Freund ist ein Schatz."},
+        ],
+    },
+
+    ("A2", "business"): {
+        "note": (
+            "📖 Business and Money — A2\n\n"
+            "PREPOSITIONS that ALWAYS take the DATIV\n"
+            "aus (from/out of) · bei (at/with/near) · mit (with) · nach (after/to) · "
+            "seit (since/for) · von (from/of) · zu (to).\n"
+            "Articles become: der/das→dem, die→der, plural→den (+n).\n"
+            "Contractions: bei dem→beim, von dem→vom, zu dem→zum, zu der→zur.\n"
+            "• Ich arbeite bei einer Bank.  ·  Ich fahre mit dem Bus zur Arbeit.\n"
+            "• Nach der Arbeit gehe ich nach Hause.  ·  Ich kenne ihn seit einem Jahr.\n\n"
+            "Tap Start: 40 sentences, easy → harder. 💪"
+        ),
+        "questions": [
+            {"en": "I work at a bank.", "de": "Ich arbeite bei einer Bank."},
+            {"en": "I go to work by bus.", "de": "Ich fahre mit dem Bus zur Arbeit."},
+            {"en": "After work I go home.", "de": "Nach der Arbeit gehe ich nach Hause."},
+            {"en": "I have known him for a year.", "de": "Ich kenne ihn seit einem Jahr."},
+            {"en": "The money is from the bank.", "de": "Das Geld ist von der Bank."},
+            {"en": "I come from Germany.", "de": "Ich komme aus Deutschland."},
+            {"en": "She lives with her parents.", "de": "Sie wohnt bei ihren Eltern."},
+            {"en": "We go to the meeting.", "de": "Wir gehen zum Meeting."},
+            {"en": "I pay with a card.", "de": "Ich bezahle mit einer Karte."},
+            {"en": "He works for a big company.", "de": "Er arbeitet bei einer großen Firma."},
+            {"en": "I walk to the bank.", "de": "Ich gehe zur Bank."},
+            {"en": "I get the email from my boss.", "de": "Ich bekomme die E-Mail von meinem Chef."},
+            {"en": "Since Monday I have a new job.", "de": "Seit Montag habe ich einen neuen Job."},
+            {"en": "I come from the office.", "de": "Ich komme aus dem Büro."},
+            {"en": "After the meeting we eat.", "de": "Nach dem Meeting essen wir."},
+            {"en": "I live near the company.", "de": "Ich wohne bei der Firma."},
+            {"en": "He drives to the airport.", "de": "Er fährt zum Flughafen."},
+            {"en": "The train comes from Berlin.", "de": "Der Zug kommt aus Berlin."},
+            {"en": "I work with my colleagues.", "de": "Ich arbeite mit meinen Kollegen."},
+            {"en": "She has worked here since 2020.", "de": "Sie arbeitet seit 2020 hier."},
+            {"en": "We go to the bank together.", "de": "Wir gehen zusammen zur Bank."},
+            {"en": "The gift is from my friend.", "de": "Das Geschenk ist von meinem Freund."},
+            {"en": "After the call I write an email.", "de": "Nach dem Anruf schreibe ich eine E-Mail."},
+            {"en": "I travel with my family.", "de": "Ich reise mit meiner Familie."},
+            {"en": "He comes from a small town.", "de": "Er kommt aus einer kleinen Stadt."},
+            {"en": "I have been waiting for an hour.", "de": "Ich warte seit einer Stunde."},
+            {"en": "We drive to the customer.", "de": "Wir fahren zum Kunden."},
+            {"en": "The money comes from the company.", "de": "Das Geld kommt von der Firma."},
+            {"en": "She lives with a friend.", "de": "Sie wohnt bei einer Freundin."},
+            {"en": "I go to the doctor after work.", "de": "Ich gehe nach der Arbeit zum Arzt."},
+            {"en": "The package is from the supplier.", "de": "Das Paket ist vom Lieferanten."},
+            {"en": "We pay by bank transfer.", "de": "Wir zahlen mit Überweisung."},
+            {"en": "He has lived here since 2015.", "de": "Er wohnt seit 2015 hier."},
+            {"en": "I take the money from the account.", "de": "Ich nehme das Geld vom Konto."},
+            {"en": "After the holiday I start the new job.", "de": "Nach dem Urlaub fange ich den neuen Job an."},
+            {"en": "She works with modern tools.", "de": "Sie arbeitet mit modernen Werkzeugen."},
+            {"en": "I go from the office to the station.", "de": "Ich gehe vom Büro zum Bahnhof."},
+            {"en": "He learns from his mistakes.", "de": "Er lernt aus seinen Fehlern."},
+            {"en": "We meet at the entrance.", "de": "Wir treffen uns beim Eingang."},
+            {"en": "Good business starts with trust.", "de": "Gutes Geschäft beginnt mit Vertrauen."},
+        ],
+    },
+
+    ("A2", "physical_appearance"): {
+        "note": (
+            "📖 Physical Appearance — A2\n\n"
+            "COMPARING PEOPLE (comparative & superlative)\n"
+            "Comparative: -er … als (than)  ·  Superlative: am + -sten / der/die/das + -ste.\n"
+            "  groß → größer → am größten · alt → älter → am ältesten · jung → jünger\n"
+            "• Mein Bruder ist größer als ich.\n"
+            "• Sie ist die jüngste in der Familie.\n"
+            "With a noun, the comparative/superlative also takes an adjective ending:\n"
+            "• Er hat die längeren Haare.  ·  Sie ist die schönste Frau.\n"
+            "Equality: so … wie (as … as). Irregular: gut → besser → am besten.\n\n"
+            "Tap Start: 40 sentences, easy → harder. 💪"
+        ),
+        "questions": [
+            {"en": "My brother is taller than me.", "de": "Mein Bruder ist größer als ich."},
+            {"en": "She is younger than her sister.", "de": "Sie ist jünger als ihre Schwester."},
+            {"en": "He is the oldest in the family.", "de": "Er ist der älteste in der Familie."},
+            {"en": "I am smaller than you.", "de": "Ich bin kleiner als du."},
+            {"en": "Her hair is longer than mine.", "de": "Ihre Haare sind länger als meine."},
+            {"en": "He is the tallest in the class.", "de": "Er ist der größte in der Klasse."},
+            {"en": "She is older than me.", "de": "Sie ist älter als ich."},
+            {"en": "My sister is prettier than me.", "de": "Meine Schwester ist hübscher als ich."},
+            {"en": "He has shorter hair now.", "de": "Er hat jetzt kürzere Haare."},
+            {"en": "She is the youngest child.", "de": "Sie ist das jüngste Kind."},
+            {"en": "He looks younger than his brother.", "de": "Er sieht jünger aus als sein Bruder."},
+            {"en": "I am as tall as my father.", "de": "Ich bin so groß wie mein Vater."},
+            {"en": "Her eyes are darker than his.", "de": "Ihre Augen sind dunkler als seine."},
+            {"en": "He is the strongest man here.", "de": "Er ist der stärkste Mann hier."},
+            {"en": "She is more beautiful than ever.", "de": "Sie ist schöner als je zuvor."},
+            {"en": "My hair is shorter than yours.", "de": "Meine Haare sind kürzer als deine."},
+            {"en": "He is taller than all his friends.", "de": "Er ist größer als alle seine Freunde."},
+            {"en": "She has the longest hair.", "de": "Sie hat die längsten Haare."},
+            {"en": "I am older than my cousin.", "de": "Ich bin älter als mein Cousin."},
+            {"en": "He looks the best in a suit.", "de": "Er sieht im Anzug am besten aus."},
+            {"en": "She is slimmer than before.", "de": "Sie ist schlanker als vorher."},
+            {"en": "My grandfather is the oldest.", "de": "Mein Großvater ist der älteste."},
+            {"en": "He is bigger than his father.", "de": "Er ist größer als sein Vater."},
+            {"en": "She is the prettiest girl.", "de": "Sie ist das hübscheste Mädchen."},
+            {"en": "I am younger than my brother.", "de": "Ich bin jünger als mein Bruder."},
+            {"en": "His beard is longer now.", "de": "Sein Bart ist jetzt länger."},
+            {"en": "She looks younger than me.", "de": "Sie sieht jünger aus als ich."},
+            {"en": "He is the most handsome man.", "de": "Er ist der schönste Mann."},
+            {"en": "My sister is taller than I thought.", "de": "Meine Schwester ist größer als ich dachte."},
+            {"en": "Her smile is the most beautiful.", "de": "Ihr Lächeln ist am schönsten."},
+            {"en": "He is stronger than his brother.", "de": "Er ist stärker als sein Bruder."},
+            {"en": "She has darker eyes than me.", "de": "Sie hat dunklere Augen als ich."},
+            {"en": "I am the smallest in my family.", "de": "Ich bin der kleinste in meiner Familie."},
+            {"en": "He looks older with a beard.", "de": "Mit einem Bart sieht er älter aus."},
+            {"en": "She is the most elegant woman.", "de": "Sie ist die eleganteste Frau."},
+            {"en": "My hair is darker in winter.", "de": "Meine Haare sind im Winter dunkler."},
+            {"en": "He is taller than average.", "de": "Er ist größer als der Durchschnitt."},
+            {"en": "She is the friendliest of all.", "de": "Sie ist die freundlichste von allen."},
+            {"en": "I feel younger than I am.", "de": "Ich fühle mich jünger, als ich bin."},
+            {"en": "Good health makes you look younger.", "de": "Gute Gesundheit lässt dich jünger aussehen."},
+        ],
+    },
+
+    ("A2", "town_city"): {
+        "note": (
+            "📖 Town and City — A2\n\n"
+            "GETTING AROUND — movement in the past (Perfekt + sein) & two-way prepositions\n"
+            "Motion verbs (gehen, fahren, laufen) use sein in the Perfekt, and movement "
+            "TOWARD a place takes the AKKUSATIV:\n"
+            "• Ich bin in die Stadt gefahren.  ·  Wir sind zum Markt gelaufen.\n"
+            "Separable verbs put -ge- in the middle:\n"
+            "• Der Zug ist um acht angekommen.  ·  Ich bin am Bahnhof ausgestiegen.\n\n"
+            "Reminder: in/an/auf/vor … + AKK for direction, + DAT for location.\n"
+            "• Ich bin auf den Platz gegangen. (direction)  vs.  Ich war auf dem Platz. (location)\n\n"
+            "Tap Start: 40 sentences, easy → harder. 💪"
+        ),
+        "questions": [
+            {"en": "I drove into town.", "de": "Ich bin in die Stadt gefahren."},
+            {"en": "We walked to the market.", "de": "Wir sind zum Markt gelaufen."},
+            {"en": "The train arrived at eight.", "de": "Der Zug ist um acht angekommen."},
+            {"en": "I got off at the station.", "de": "Ich bin am Bahnhof ausgestiegen."},
+            {"en": "She went to the town hall.", "de": "Sie ist zum Rathaus gegangen."},
+            {"en": "We drove to the city center.", "de": "Wir sind ins Zentrum gefahren."},
+            {"en": "The bus departed late.", "de": "Der Bus ist spät abgefahren."},
+            {"en": "I got on the train.", "de": "Ich bin in den Zug eingestiegen."},
+            {"en": "They went into the museum.", "de": "Sie sind ins Museum gegangen."},
+            {"en": "We changed at the main station.", "de": "Wir sind am Hauptbahnhof umgestiegen."},
+            {"en": "He walked across the square.", "de": "Er ist über den Platz gelaufen."},
+            {"en": "I came back late.", "de": "Ich bin spät zurückgekommen."},
+            {"en": "We went to the park.", "de": "Wir sind in den Park gegangen."},
+            {"en": "She got up and went out.", "de": "Sie ist aufgestanden und ausgegangen."},
+            {"en": "The train came from Munich.", "de": "Der Zug ist aus München gekommen."},
+            {"en": "I walked to the bridge.", "de": "Ich bin zur Brücke gelaufen."},
+            {"en": "We drove over the bridge.", "de": "Wir sind über die Brücke gefahren."},
+            {"en": "He went into the shop.", "de": "Er ist in den Laden gegangen."},
+            {"en": "They arrived in the evening.", "de": "Sie sind am Abend angekommen."},
+            {"en": "I got off at the next stop.", "de": "Ich bin an der nächsten Haltestelle ausgestiegen."},
+            {"en": "We went home on foot.", "de": "Wir sind zu Fuß nach Hause gegangen."},
+            {"en": "The bus stopped in front of the bank.", "de": "Der Bus hat vor der Bank gehalten."},
+            {"en": "She went to the post office.", "de": "Sie ist zur Post gegangen."},
+            {"en": "We walked through the old town.", "de": "Wir sind durch die Altstadt gelaufen."},
+            {"en": "I drove to the airport.", "de": "Ich bin zum Flughafen gefahren."},
+            {"en": "He came into the room.", "de": "Er ist ins Zimmer gekommen."},
+            {"en": "We arrived at the hotel.", "de": "Wir sind am Hotel angekommen."},
+            {"en": "They went up the stairs.", "de": "Sie sind die Treppe hochgegangen."},
+            {"en": "I walked into the garden.", "de": "Ich bin in den Garten gegangen."},
+            {"en": "She got out of the car.", "de": "Sie ist aus dem Auto ausgestiegen."},
+            {"en": "We drove to the village.", "de": "Wir sind ins Dorf gefahren."},
+            {"en": "The plane landed on time.", "de": "Das Flugzeug ist pünktlich gelandet."},
+            {"en": "I went to the bus stop.", "de": "Ich bin zur Haltestelle gegangen."},
+            {"en": "He ran across the street.", "de": "Er ist über die Straße gelaufen."},
+            {"en": "We came back from the trip.", "de": "Wir sind von der Reise zurückgekommen."},
+            {"en": "She went onto the balcony.", "de": "Sie ist auf den Balkon gegangen."},
+            {"en": "I got up early and went to the market.", "de": "Ich bin früh aufgestanden und zum Markt gegangen."},
+            {"en": "The train left the station.", "de": "Der Zug ist aus dem Bahnhof gefahren."},
+            {"en": "We walked around the lake.", "de": "Wir sind um den See gelaufen."},
+            {"en": "If you go straight ahead, you reach the church.", "de": "Wenn du geradeaus gehst, kommst du zur Kirche."},
+        ],
+    },
+
+    ("A2", "music"): {
+        "note": (
+            "📖 Music — A2\n\n"
+            "THE SIMPLE PAST of MODAL VERBS (Präteritum)\n"
+            "Modals are normally used in the Präteritum (not Perfekt) for the past. "
+            "They lose the umlaut and add -te:\n"
+            "  können → konnte · müssen → musste · wollen → wollte · "
+            "dürfen → durfte · sollen → sollte · mögen → mochte\n"
+            "ich konnte, du konntest, er konnte, wir konnten, ihr konntet, sie konnten.\n"
+            "The second verb stays an infinitive at the END:\n"
+            "• Früher konnte ich Gitarre spielen.\n"
+            "• Als Kind wollte ich Sängerin werden.\n"
+            "früher = used to · als Kind = as a child.\n\n"
+            "Tap Start: 40 sentences, easy → harder. 💪"
+        ),
+        "questions": [
+            {"en": "I used to play the guitar.", "de": "Früher konnte ich Gitarre spielen."},
+            {"en": "As a child I wanted to be a singer.", "de": "Als Kind wollte ich Sängerin werden."},
+            {"en": "He could sing very well.", "de": "Er konnte sehr gut singen."},
+            {"en": "We had to practice every day.", "de": "Wir mussten jeden Tag üben."},
+            {"en": "She wanted to learn the piano.", "de": "Sie wollte Klavier lernen."},
+            {"en": "I could not come to the concert.", "de": "Ich konnte nicht zum Konzert kommen."},
+            {"en": "We were allowed to stay late.", "de": "Wir durften lange bleiben."},
+            {"en": "He had to sell his guitar.", "de": "Er musste seine Gitarre verkaufen."},
+            {"en": "I wanted to go to the concert.", "de": "Ich wollte zum Konzert gehen."},
+            {"en": "She could play three instruments.", "de": "Sie konnte drei Instrumente spielen."},
+            {"en": "We wanted to start a band.", "de": "Wir wollten eine Band gründen."},
+            {"en": "I had to wait outside.", "de": "Ich musste draußen warten."},
+            {"en": "As a child he liked rock music.", "de": "Als Kind mochte er Rockmusik."},
+            {"en": "They could not find tickets.", "de": "Sie konnten keine Karten finden."},
+            {"en": "We were not allowed to take photos.", "de": "Wir durften keine Fotos machen."},
+            {"en": "I had to learn the lyrics.", "de": "Ich musste den Text lernen."},
+            {"en": "She wanted to sing in a choir.", "de": "Sie wollte in einem Chor singen."},
+            {"en": "He could dance very well.", "de": "Er konnte sehr gut tanzen."},
+            {"en": "We had to be quiet during the concert.", "de": "Wir mussten beim Konzert leise sein."},
+            {"en": "I wanted to buy a new guitar.", "de": "Ich wollte eine neue Gitarre kaufen."},
+            {"en": "As a child I could not read music.", "de": "Als Kind konnte ich keine Noten lesen."},
+            {"en": "She had to cancel the concert.", "de": "Sie musste das Konzert absagen."},
+            {"en": "We were allowed to go backstage.", "de": "Wir durften hinter die Bühne gehen."},
+            {"en": "He wanted to become famous.", "de": "Er wollte berühmt werden."},
+            {"en": "I could hear the music from far away.", "de": "Ich konnte die Musik von weitem hören."},
+            {"en": "They had to leave early.", "de": "Sie mussten früh gehen."},
+            {"en": "She wanted to play in a concert.", "de": "Sie wollte in einem Konzert spielen."},
+            {"en": "We could not hear the singer.", "de": "Wir konnten den Sänger nicht hören."},
+            {"en": "I liked classical music as a teenager.", "de": "Als Teenager mochte ich klassische Musik."},
+            {"en": "He had to repair his instrument.", "de": "Er musste sein Instrument reparieren."},
+            {"en": "We wanted to dance all night.", "de": "Wir wollten die ganze Nacht tanzen."},
+            {"en": "I could not afford the tickets.", "de": "Ich konnte mir die Karten nicht leisten."},
+            {"en": "She had to practice for the show.", "de": "Sie musste für die Show üben."},
+            {"en": "They were allowed to choose the songs.", "de": "Sie durften die Lieder aussuchen."},
+            {"en": "As a child she wanted to play violin.", "de": "Als Kind wollte sie Geige spielen."},
+            {"en": "We had to buy the tickets online.", "de": "Wir mussten die Karten online kaufen."},
+            {"en": "He could write his own songs.", "de": "Er konnte eigene Lieder schreiben."},
+            {"en": "I wanted to see my favorite band.", "de": "Ich wollte meine Lieblingsband sehen."},
+            {"en": "We could not stay until the end.", "de": "Wir konnten nicht bis zum Ende bleiben."},
+            {"en": "Music was always important to me.", "de": "Musik war mir immer wichtig."},
+        ],
+    },
+
+    ("A2", "weather"): {
+        "note": (
+            "📖 Weather — A2\n\n"
+            "SIMPLE PAST of sein, haben, es (Präteritum)\n"
+            "For sein, haben and weather \"es\", the Präteritum is preferred:\n"
+            "  sein → war (ich war, du warst, er war, wir waren …)\n"
+            "  haben → hatte (ich hatte, du hattest, er hatte …)\n"
+            "  es gibt → es gab · es regnet → es regnete\n"
+            "• Gestern war es kalt.  ·  Wir hatten schönes Wetter.  ·  Es gab ein Gewitter.\n\n"
+            "THE FUTURE with werden + infinitive (END):\n"
+            "  ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden\n"
+            "• Morgen wird es regnen.  ·  Es wird kälter werden.\n"
+            "(German often uses the present for the future too: Morgen regnet es.)\n\n"
+            "Tap Start: 40 sentences, easy → harder. 💪"
+        ),
+        "questions": [
+            {"en": "Yesterday it was cold.", "de": "Gestern war es kalt."},
+            {"en": "We had nice weather.", "de": "Wir hatten schönes Wetter."},
+            {"en": "There was a storm.", "de": "Es gab ein Gewitter."},
+            {"en": "Tomorrow it will rain.", "de": "Morgen wird es regnen."},
+            {"en": "It was very hot in summer.", "de": "Im Sommer war es sehr heiß."},
+            {"en": "The weather was bad.", "de": "Das Wetter war schlecht."},
+            {"en": "It will get colder.", "de": "Es wird kälter werden."},
+            {"en": "We had a lot of snow.", "de": "Wir hatten viel Schnee."},
+            {"en": "It was sunny yesterday.", "de": "Gestern war es sonnig."},
+            {"en": "It will be warm tomorrow.", "de": "Morgen wird es warm sein."},
+            {"en": "There was a lot of wind.", "de": "Es gab viel Wind."},
+            {"en": "The sky was grey.", "de": "Der Himmel war grau."},
+            {"en": "It will snow next week.", "de": "Nächste Woche wird es schneien."},
+            {"en": "We had no rain for weeks.", "de": "Wir hatten wochenlang keinen Regen."},
+            {"en": "It was foggy in the morning.", "de": "Am Morgen war es neblig."},
+            {"en": "The summer will be hot.", "de": "Der Sommer wird heiß werden."},
+            {"en": "It was ten degrees yesterday.", "de": "Gestern waren es zehn Grad."},
+            {"en": "There was ice on the streets.", "de": "Es gab Eis auf den Straßen."},
+            {"en": "The weather will improve.", "de": "Das Wetter wird besser werden."},
+            {"en": "It rained all day.", "de": "Es regnete den ganzen Tag."},
+            {"en": "We had a beautiful spring.", "de": "Wir hatten einen schönen Frühling."},
+            {"en": "It will be cloudy tomorrow.", "de": "Morgen wird es bewölkt sein."},
+            {"en": "The winter was very long.", "de": "Der Winter war sehr lang."},
+            {"en": "There will be a thunderstorm.", "de": "Es wird ein Gewitter geben."},
+            {"en": "It was warm at the beach.", "de": "Am Strand war es warm."},
+            {"en": "We had storms last week.", "de": "Letzte Woche hatten wir Stürme."},
+            {"en": "It will rain in the evening.", "de": "Am Abend wird es regnen."},
+            {"en": "The night was cold.", "de": "Die Nacht war kalt."},
+            {"en": "There was no sun today.", "de": "Heute gab es keine Sonne."},
+            {"en": "The weather will stay nice.", "de": "Das Wetter wird schön bleiben."},
+            {"en": "It was windy on the mountain.", "de": "Auf dem Berg war es windig."},
+            {"en": "We had a mild winter.", "de": "Wir hatten einen milden Winter."},
+            {"en": "Tomorrow it will be sunny.", "de": "Morgen wird es sonnig sein."},
+            {"en": "The rain was very heavy.", "de": "Der Regen war sehr stark."},
+            {"en": "There will be more rain.", "de": "Es wird mehr Regen geben."},
+            {"en": "It was already dark at five.", "de": "Um fünf war es schon dunkel."},
+            {"en": "The weather was perfect.", "de": "Das Wetter war perfekt."},
+            {"en": "It will get warmer in March.", "de": "Im März wird es wärmer werden."},
+            {"en": "We had wonderful weather on holiday.", "de": "Im Urlaub hatten wir wunderbares Wetter."},
+            {"en": "If it rains tomorrow, we will stay home.", "de": "Wenn es morgen regnet, bleiben wir zu Hause."},
+        ],
+    },
+
+    ("A2", "shopping"): {
+        "note": (
+            "📖 Shopping — A2\n\n"
+            "INDIRECT QUESTIONS (verb to the END)\n"
+            "Put a question inside a sentence to be polite or to report it. "
+            "The conjugated verb moves to the END.\n"
+            "• Yes/No question → use ob (whether/if):\n"
+            "   Kostet das viel? → Ich weiß nicht, ob das viel kostet.\n"
+            "   Können Sie mir sagen, ob es das in Blau gibt?\n"
+            "• W-question → keep the question word (wo, wann, wie viel …):\n"
+            "   Wo ist die Kasse? → Können Sie mir sagen, wo die Kasse ist?\n"
+            "Openers: Ich weiß nicht, … · Können Sie mir sagen, … · Ich frage mich, …\n\n"
+            "Tap Start: 40 sentences, easy → harder. 💪"
+        ),
+        "questions": [
+            {"en": "I don't know if that is expensive.", "de": "Ich weiß nicht, ob das teuer ist."},
+            {"en": "Can you tell me where the checkout is?", "de": "Können Sie mir sagen, wo die Kasse ist?"},
+            {"en": "I don't know if they have it in blue.", "de": "Ich weiß nicht, ob sie es in Blau haben."},
+            {"en": "Can you tell me how much it costs?", "de": "Können Sie mir sagen, wie viel es kostet?"},
+            {"en": "I wonder if the shop is open.", "de": "Ich frage mich, ob das Geschäft offen ist."},
+            {"en": "Do you know where the shoes are?", "de": "Wissen Sie, wo die Schuhe sind?"},
+            {"en": "I don't know if this is my size.", "de": "Ich weiß nicht, ob das meine Größe ist."},
+            {"en": "Can you tell me when you close?", "de": "Können Sie mir sagen, wann Sie schließen?"},
+            {"en": "I am not sure if it fits.", "de": "Ich bin nicht sicher, ob es passt."},
+            {"en": "Do you know if it is on offer?", "de": "Wissen Sie, ob es im Angebot ist?"},
+            {"en": "I don't know what I should buy.", "de": "Ich weiß nicht, was ich kaufen soll."},
+            {"en": "Can you tell me where the exit is?", "de": "Können Sie mir sagen, wo der Ausgang ist?"},
+            {"en": "I wonder if we have enough money.", "de": "Ich frage mich, ob wir genug Geld haben."},
+            {"en": "Do you know how much the bag costs?", "de": "Wissen Sie, wie viel die Tasche kostet?"},
+            {"en": "I don't know if they accept cards.", "de": "Ich weiß nicht, ob sie Karten nehmen."},
+            {"en": "Can you tell me which size this is?", "de": "Können Sie mir sagen, welche Größe das ist?"},
+            {"en": "I am not sure if I need it.", "de": "Ich bin nicht sicher, ob ich es brauche."},
+            {"en": "Do you know when the sale starts?", "de": "Wissen Sie, wann der Schlussverkauf beginnt?"},
+            {"en": "I wonder if the price is fair.", "de": "Ich frage mich, ob der Preis fair ist."},
+            {"en": "Can you tell me where I can pay?", "de": "Können Sie mir sagen, wo ich bezahlen kann?"},
+            {"en": "I don't know if this colour suits me.", "de": "Ich weiß nicht, ob mir diese Farbe steht."},
+            {"en": "Do you know if there is a discount?", "de": "Wissen Sie, ob es einen Rabatt gibt?"},
+            {"en": "I am not sure where my receipt is.", "de": "Ich bin nicht sicher, wo mein Kassenbon ist."},
+            {"en": "Can you tell me how I get there?", "de": "Können Sie mir sagen, wie ich dorthin komme?"},
+            {"en": "I wonder if they have my size.", "de": "Ich frage mich, ob sie meine Größe haben."},
+            {"en": "I don't know if I should take it.", "de": "Ich weiß nicht, ob ich es nehmen soll."},
+            {"en": "Do you know where the fitting room is?", "de": "Wissen Sie, wo die Umkleidekabine ist?"},
+            {"en": "Can you tell me if this is new?", "de": "Können Sie mir sagen, ob das neu ist?"},
+            {"en": "I am not sure how much I can spend.", "de": "Ich bin nicht sicher, wie viel ich ausgeben kann."},
+            {"en": "I wonder why it is so expensive.", "de": "Ich frage mich, warum es so teuer ist."},
+            {"en": "Do you know if the shop has a website?", "de": "Wissen Sie, ob das Geschäft eine Webseite hat?"},
+            {"en": "I don't know which one is better.", "de": "Ich weiß nicht, welches besser ist."},
+            {"en": "Can you tell me when it will arrive?", "de": "Können Sie mir sagen, wann es ankommt?"},
+            {"en": "I wonder if I can return it.", "de": "Ich frage mich, ob ich es zurückgeben kann."},
+            {"en": "Do you know how the machine works?", "de": "Wissen Sie, wie die Maschine funktioniert?"},
+            {"en": "I am not sure if the size is right.", "de": "Ich bin nicht sicher, ob die Größe richtig ist."},
+            {"en": "I don't know if they deliver.", "de": "Ich weiß nicht, ob sie liefern."},
+            {"en": "Can you tell me where I find the offers?", "de": "Können Sie mir sagen, wo ich die Angebote finde?"},
+            {"en": "I wonder whether it is worth it.", "de": "Ich frage mich, ob es sich lohnt."},
+            {"en": "I want to know if the shop is still open.", "de": "Ich möchte wissen, ob das Geschäft noch offen ist."},
+        ],
+    },
+
+    ("A2", "environment"): {
+        "note": (
+            "📖 Environment — A2\n\n"
+            "THE FUTURE with werden (review) + PURPOSE with um … zu\n"
+            "FUTURE: werden + infinitive (END).\n"
+            "• Wir werden mehr recyceln.  ·  Die Welt wird sich verändern.\n\n"
+            "PURPOSE: um … zu + infinitive = \"in order to / to\". "
+            "The verb goes to the END after zu, and the subject is the SAME in both parts.\n"
+            "• Wir trennen den Müll, um die Umwelt zu schützen.\n"
+            "• Ich fahre Fahrrad, um Benzin zu sparen.\n"
+            "With separable verbs, zu goes inside: um Gemüse anzubauen.\n\n"
+            "Tap Start: 40 sentences, easy → harder. 💪"
+        ),
+        "questions": [
+            {"en": "We will recycle more.", "de": "Wir werden mehr recyceln."},
+            {"en": "The world will change.", "de": "Die Welt wird sich verändern."},
+            {"en": "We separate the rubbish to protect the environment.", "de": "Wir trennen den Müll, um die Umwelt zu schützen."},
+            {"en": "I ride a bike to save petrol.", "de": "Ich fahre Fahrrad, um Benzin zu sparen."},
+            {"en": "We will use less plastic.", "de": "Wir werden weniger Plastik benutzen."},
+            {"en": "I turn off the light to save energy.", "de": "Ich schalte das Licht aus, um Energie zu sparen."},
+            {"en": "The climate will get warmer.", "de": "Das Klima wird wärmer werden."},
+            {"en": "We plant trees to help nature.", "de": "Wir pflanzen Bäume, um der Natur zu helfen."},
+            {"en": "People will drive electric cars.", "de": "Die Menschen werden Elektroautos fahren."},
+            {"en": "I buy local food to protect the climate.", "de": "Ich kaufe lokale Lebensmittel, um das Klima zu schützen."},
+            {"en": "We will save water.", "de": "Wir werden Wasser sparen."},
+            {"en": "He walks to work to stay healthy.", "de": "Er geht zu Fuß zur Arbeit, um gesund zu bleiben."},
+            {"en": "We must act to save the planet.", "de": "Wir müssen handeln, um den Planeten zu retten."},
+            {"en": "The air will become cleaner.", "de": "Die Luft wird sauberer werden."},
+            {"en": "I use a bottle to avoid plastic.", "de": "Ich benutze eine Flasche, um Plastik zu vermeiden."},
+            {"en": "We will protect the forests.", "de": "Wir werden die Wälder schützen."},
+            {"en": "She recycles paper to save trees.", "de": "Sie recycelt Papier, um Bäume zu retten."},
+            {"en": "The government will make new laws.", "de": "Die Regierung wird neue Gesetze machen."},
+            {"en": "We drive less to reduce pollution.", "de": "Wir fahren weniger, um die Umweltverschmutzung zu reduzieren."},
+            {"en": "I save energy to lower my bills.", "de": "Ich spare Energie, um meine Rechnungen zu senken."},
+            {"en": "Many people will eat less meat.", "de": "Viele Menschen werden weniger Fleisch essen."},
+            {"en": "We collect rubbish to clean the beach.", "de": "Wir sammeln Müll, um den Strand zu reinigen."},
+            {"en": "The temperature will rise.", "de": "Die Temperatur wird steigen."},
+            {"en": "I take the train to protect the environment.", "de": "Ich nehme den Zug, um die Umwelt zu schützen."},
+            {"en": "We will use solar energy.", "de": "Wir werden Solarenergie nutzen."},
+            {"en": "He turns off the water to save it.", "de": "Er dreht das Wasser ab, um es zu sparen."},
+            {"en": "Companies will become greener.", "de": "Die Firmen werden grüner werden."},
+            {"en": "We buy less to produce less waste.", "de": "Wir kaufen weniger, um weniger Müll zu produzieren."},
+            {"en": "The sea level will rise.", "de": "Der Meeresspiegel wird steigen."},
+            {"en": "I switch off devices to save power.", "de": "Ich schalte Geräte aus, um Strom zu sparen."},
+            {"en": "We will need clean energy.", "de": "Wir werden saubere Energie brauchen."},
+            {"en": "She uses public transport to save money.", "de": "Sie benutzt öffentliche Verkehrsmittel, um Geld zu sparen."},
+            {"en": "We plant a garden to grow vegetables.", "de": "Wir pflanzen einen Garten, um Gemüse anzubauen."},
+            {"en": "The future will be different.", "de": "Die Zukunft wird anders sein."},
+            {"en": "I read about the climate to learn more.", "de": "Ich lese über das Klima, um mehr zu lernen."},
+            {"en": "We will change our habits.", "de": "Wir werden unsere Gewohnheiten ändern."},
+            {"en": "He saves paper to protect the forest.", "de": "Er spart Papier, um den Wald zu schützen."},
+            {"en": "We work together to find solutions.", "de": "Wir arbeiten zusammen, um Lösungen zu finden."},
+            {"en": "The earth will thank us.", "de": "Die Erde wird uns danken."},
+            {"en": "We must start now to save the future.", "de": "Wir müssen jetzt anfangen, um die Zukunft zu retten."},
+        ],
+    },
+
+    ("A2", "advertising"): {
+        "note": (
+            "📖 Advertising — A2\n\n"
+            "SUPERLATIVE + adjective endings (selling the \"best\" of everything)\n"
+            "Ads love the superlative. Before a noun it takes der/die/das + -ste (+ ending):\n"
+            "  gut → der beste Preis · günstig → das günstigste Angebot · "
+            "groß → die größte Auswahl\n"
+            "• Wir haben die besten Produkte.  ·  Das ist das günstigste Angebot.\n"
+            "Comparative before a noun also takes an ending:\n"
+            "  ein besseres Produkt · ein größeres Angebot · niedrigere Preise\n"
+            "Predicative superlative stays am + -sten: Unser Service ist am besten.\n\n"
+            "Tap Start: 40 sentences, easy → harder. 💪"
+        ),
+        "questions": [
+            {"en": "We have the best products.", "de": "Wir haben die besten Produkte."},
+            {"en": "This is the cheapest offer.", "de": "Das ist das günstigste Angebot."},
+            {"en": "We offer the best price.", "de": "Wir bieten den besten Preis."},
+            {"en": "Buy the best brand!", "de": "Kaufen Sie die beste Marke!"},
+            {"en": "We have the biggest selection.", "de": "Wir haben die größte Auswahl."},
+            {"en": "Our service is the best.", "de": "Unser Service ist am besten."},
+            {"en": "This is a better product.", "de": "Das ist ein besseres Produkt."},
+            {"en": "We have the lowest prices.", "de": "Wir haben die niedrigsten Preise."},
+            {"en": "It is the most popular brand.", "de": "Es ist die beliebteste Marke."},
+            {"en": "Get the newest model now!", "de": "Holen Sie sich jetzt das neueste Modell!"},
+            {"en": "We give you the best quality.", "de": "Wir geben Ihnen die beste Qualität."},
+            {"en": "This offer is better than the others.", "de": "Dieses Angebot ist besser als die anderen."},
+            {"en": "We have the freshest fruit.", "de": "Wir haben das frischeste Obst."},
+            {"en": "Choose the most modern phone!", "de": "Wählen Sie das modernste Handy!"},
+            {"en": "Our prices are the lowest.", "de": "Unsere Preise sind am niedrigsten."},
+            {"en": "It is the fastest computer.", "de": "Es ist der schnellste Computer."},
+            {"en": "We offer a bigger discount.", "de": "Wir bieten einen größeren Rabatt."},
+            {"en": "This is the best deal of the year.", "de": "Das ist das beste Angebot des Jahres."},
+            {"en": "We have the most beautiful designs.", "de": "Wir haben die schönsten Designs."},
+            {"en": "Buy the most comfortable shoes!", "de": "Kaufen Sie die bequemsten Schuhe!"},
+            {"en": "This brand is the most famous.", "de": "Diese Marke ist die bekannteste."},
+            {"en": "We sell the cheapest tickets.", "de": "Wir verkaufen die günstigsten Karten."},
+            {"en": "It is a stronger material.", "de": "Es ist ein stärkeres Material."},
+            {"en": "Our shop has the best offers.", "de": "Unser Geschäft hat die besten Angebote."},
+            {"en": "This is the highest quality.", "de": "Das ist die höchste Qualität."},
+            {"en": "We have a larger store now.", "de": "Wir haben jetzt einen größeren Laden."},
+            {"en": "Try the tastiest coffee!", "de": "Probieren Sie den leckersten Kaffee!"},
+            {"en": "It is the safest car.", "de": "Es ist das sicherste Auto."},
+            {"en": "We offer the friendliest service.", "de": "Wir bieten den freundlichsten Service."},
+            {"en": "This is the easiest solution.", "de": "Das ist die einfachste Lösung."},
+            {"en": "Get more for less money!", "de": "Bekommen Sie mehr für weniger Geld!"},
+            {"en": "We have the longest opening hours.", "de": "Wir haben die längsten Öffnungszeiten."},
+            {"en": "It is the lightest laptop.", "de": "Es ist der leichteste Laptop."},
+            {"en": "This is our most popular product.", "de": "Das ist unser beliebtestes Produkt."},
+            {"en": "We give the fastest delivery.", "de": "Wir bieten die schnellste Lieferung."},
+            {"en": "Choose the smarter option!", "de": "Wählen Sie die klügere Option!"},
+            {"en": "It is the best moment to buy.", "de": "Es ist der beste Moment zum Kaufen."},
+            {"en": "We have the warmest jackets.", "de": "Wir haben die wärmsten Jacken."},
+            {"en": "This is the most important sale.", "de": "Das ist der wichtigste Verkauf."},
+            {"en": "The best is just good enough for you.", "de": "Das Beste ist für Sie gerade gut genug."},
+        ],
+    },
+
+    ("A2", "government"): {
+        "note": (
+            "📖 Government and Society — A2\n\n"
+            "RELATIVE CLAUSES (introductory)\n"
+            "A relative clause adds information about a noun. It starts with a relative "
+            "pronoun (der / die / das — like \"the\"), and the verb goes to the END.\n"
+            "GENDER/NUMBER come from the noun; CASE comes from its role in the clause.\n"
+            "NOMINATIVE (subject of the clause):\n"
+            "• Der Mann, der dort arbeitet, ist Beamter.\n"
+            "• Das Formular, das auf dem Tisch liegt, ist wichtig.\n"
+            "AKKUSATIVE (object of the clause): masc. der → den.\n"
+            "• Das Formular, das ich brauche, ist hier.\n"
+            "• Der Pass, den ich habe, ist neu.\n"
+            "A comma always separates the relative clause.\n\n"
+            "Tap Start: 40 sentences, easy → harder. 💪"
+        ),
+        "questions": [
+            {"en": "The man who works there is an official.", "de": "Der Mann, der dort arbeitet, ist Beamter."},
+            {"en": "The form that I need is here.", "de": "Das Formular, das ich brauche, ist hier."},
+            {"en": "The woman who helps me is friendly.", "de": "Die Frau, die mir hilft, ist freundlich."},
+            {"en": "The office that is closed opens tomorrow.", "de": "Das Amt, das geschlossen ist, öffnet morgen."},
+            {"en": "The passport that I have is new.", "de": "Der Pass, den ich habe, ist neu."},
+            {"en": "The people who live here pay taxes.", "de": "Die Menschen, die hier wohnen, zahlen Steuern."},
+            {"en": "The form that you signed is ready.", "de": "Das Formular, das du unterschrieben hast, ist fertig."},
+            {"en": "The man who asks the question is a citizen.", "de": "Der Mann, der die Frage stellt, ist Bürger."},
+            {"en": "The letter that I wrote is important.", "de": "Der Brief, den ich geschrieben habe, ist wichtig."},
+            {"en": "The woman who works at the office is nice.", "de": "Die Frau, die im Amt arbeitet, ist nett."},
+            {"en": "The rules that we follow are clear.", "de": "Die Regeln, die wir befolgen, sind klar."},
+            {"en": "The government that we elected is new.", "de": "Die Regierung, die wir gewählt haben, ist neu."},
+            {"en": "The official who helps us is patient.", "de": "Der Beamte, der uns hilft, ist geduldig."},
+            {"en": "The document that I lost was important.", "de": "Das Dokument, das ich verloren habe, war wichtig."},
+            {"en": "The city that I love is big.", "de": "Die Stadt, die ich liebe, ist groß."},
+            {"en": "The man whom I know works here.", "de": "Der Mann, den ich kenne, arbeitet hier."},
+            {"en": "The law that protects us is good.", "de": "Das Gesetz, das uns schützt, ist gut."},
+            {"en": "The form that lies on the table is mine.", "de": "Das Formular, das auf dem Tisch liegt, ist meins."},
+            {"en": "The people who vote decide.", "de": "Die Leute, die wählen, entscheiden."},
+            {"en": "The card that I need is the ID card.", "de": "Die Karte, die ich brauche, ist der Ausweis."},
+            {"en": "The woman who answers the phone is helpful.", "de": "Die Frau, die ans Telefon geht, ist hilfsbereit."},
+            {"en": "The job that I want is at the office.", "de": "Die Stelle, die ich will, ist im Amt."},
+            {"en": "The man who waits there is my neighbor.", "de": "Der Mann, der dort wartet, ist mein Nachbar."},
+            {"en": "The passport that he shows is valid.", "de": "Der Pass, den er zeigt, ist gültig."},
+            {"en": "The rule that everyone knows is simple.", "de": "Die Regel, die jeder kennt, ist einfach."},
+            {"en": "The taxes that we pay are high.", "de": "Die Steuern, die wir zahlen, sind hoch."},
+            {"en": "The teacher who explains it is good.", "de": "Der Lehrer, der es erklärt, ist gut."},
+            {"en": "The book that I read is about politics.", "de": "Das Buch, das ich lese, handelt von Politik."},
+            {"en": "The woman who leads the office is strict.", "de": "Die Frau, die das Amt leitet, ist streng."},
+            {"en": "The decision that they make is important.", "de": "Die Entscheidung, die sie treffen, ist wichtig."},
+            {"en": "The man who signs the form is the boss.", "de": "Der Mann, der das Formular unterschreibt, ist der Chef."},
+            {"en": "The papers that I need are at home.", "de": "Die Papiere, die ich brauche, sind zu Hause."},
+            {"en": "The citizen who votes has a voice.", "de": "Der Bürger, der wählt, hat eine Stimme."},
+            {"en": "The form that you filled out is correct.", "de": "Das Formular, das du ausgefüllt hast, ist korrekt."},
+            {"en": "The office that I visited was busy.", "de": "Das Amt, das ich besucht habe, war voll."},
+            {"en": "The people that we know are kind.", "de": "Die Menschen, die wir kennen, sind nett."},
+            {"en": "The number that you called is wrong.", "de": "Die Nummer, die du angerufen hast, ist falsch."},
+            {"en": "The man who lives next door is quiet.", "de": "Der Mann, der nebenan wohnt, ist ruhig."},
+            {"en": "The country that has good laws is fair.", "de": "Das Land, das gute Gesetze hat, ist fair."},
+            {"en": "A government that listens is a good government.", "de": "Eine Regierung, die zuhört, ist eine gute Regierung."},
+        ],
+    },
+
     # === append new lessons above this line ===
 }
